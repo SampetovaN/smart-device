@@ -1,0 +1,19 @@
+.site-list {
+  @include list-refresh;
+  display: flex;
+}
+
+.site-list__item {
+  a {
+    @include set-opacity;
+  }
+
+  span {
+    @include set-mono-text(16px,17px, 400);
+    color: #ffffff;
+
+    @media (max-width: $width-desktop) {
+      @include reset-el;
+    }
+  }
+}

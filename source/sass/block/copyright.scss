@@ -1,0 +1,10 @@
+.copyright {
+  display: flex;
+  flex-direction: row;
+
+  span {
+    @include set-mono-text(13px, 24px);
+    color: #1b2d37;
+    text-transform: uppercase;
+  }
+}

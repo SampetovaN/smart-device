@@ -82,10 +82,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./source/js/utils..js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./source/js/scrollBlock.js":
+/*!**********************************!*\
+  !*** ./source/js/scrollBlock.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+eval("\n\n(function () {\n  var BODY_LOCK_CLASS = 'body-lock';\n  var body = document.querySelector('body');\n\n  if (body) {\n    var existVerticalScroll = function () {\n      return document.body.offsetHeight > window.innerHeight;\n    };\n\n    var getBodyScrollTop = function () {\n      return self.pageYOffset || document.documentElement && document.documentElement.ScrollTop || document.body && document.body.scrollTop;\n    };\n\n    var setScrollBlock = function () {\n      body.dataset.scrollY = getBodyScrollTop();\n\n      if (existVerticalScroll()) {\n        body.classList.add(BODY_LOCK_CLASS);\n        body.style.top = '-' + body.dataset.scrollY + 'px';\n      }\n    };\n\n    var unsetScrollBlock = function () {\n      if (existVerticalScroll()) {\n        body.classList.remove(BODY_LOCK_CLASS);\n        window.scrollTo(0, body.dataset.scrollY);\n      }\n    };\n\n    window.scrollBlock = {\n      set: setScrollBlock,\n      unset: unsetScrollBlock\n    };\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/scrollBlock.js?");
+
+/***/ }),
 
 /***/ "./source/js/utils..js":
 /*!*****************************!*\
@@ -96,6 +108,17 @@
 
 
 eval("\n\n(function () {\n  var ESCAPE_BUTTON = 'Escape';\n\n  var isEscEvent = function (evt, action) {\n    if (evt.key === ESCAPE_BUTTON) {\n      evt.preventDefault();\n      action(evt);\n    }\n  };\n\n  window.utils = {\n    isEscEvent: isEscEvent\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/utils..js?");
+
+/***/ }),
+
+/***/ 0:
+/*!**************************************************************!*\
+  !*** multi ./source/js/scrollBlock.js ./source/js/utils..js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\scrollBlock.js */\"./source/js/scrollBlock.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\utils..js */\"./source/js/utils..js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/scrollBlock.js_./source/js/utils..js?");
 
 /***/ })
 

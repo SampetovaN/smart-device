@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo__title {
+  @include text-sets(25px, 29px, 700);
+  color: #ffffff;
+}
+
+.logo__translation {
+  @include text-sets(12px,14px, 700);
+  color: #788891;
+}

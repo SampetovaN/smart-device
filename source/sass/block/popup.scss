@@ -1,0 +1,15 @@
+.popup {
+  display: none;
+  background-color: #00b2ff;
+  width: 490px;
+  height: 444px;
+  z-index: 5;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
+}

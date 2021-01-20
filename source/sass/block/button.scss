@@ -1,5 +1,6 @@
 .button {
   @include text-sets(14px, 16px, 700);
+  @include set-opacity;
   text-transform: uppercase;
   font: inherit;
   text-align: center;

@@ -1,0 +1,66 @@
+.intro {
+  display: flex;
+  justify-content: space-around;
+  padding: 11.3% 19.4% 15.3%;
+  position: relative;
+  background-image: url("../img/bg-top.png");
+  background-repeat: no-repeat;
+  background-color: rgba(#000000, 0.9);
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 10.7%;
+}
+
+.intro__desc {
+  h1 {
+    @include text-sets(80px,93px, 700);
+    color: #ffffff;
+
+    @media (max-width: $width-desktop) {
+      @include text-correct(60px, 73px);
+    }
+
+    @media (max-width: $width-laptop) {
+      @include text-correct(40px, 46px);
+    }
+  }
+
+  p {
+    @include set-mono-text(22px,34px, 400);
+    color: #ffffff;
+    position: relative;
+    padding-left: 70px;
+
+    @media (max-width: $width-desktop) {
+      @include text-correct(18px, 28px);
+    }
+
+    @media (max-width: $width-laptop) {
+      @include text-correct(16px, 25px);
+    }
+
+    &::before {
+      content: "";
+      background-color: #ffffff;
+      width: 66px;
+      height: 2px;
+      position: absolute;
+      top: 25%;
+      left: 0;
+    }
+  }
+}
+
+.intro__button-desc {
+  color: #ffffff;
+  background-color: #00b2ff;
+}
+
+.intro__button {
+  @include set-mono-text(14px,15px, 400);
+  color: rgba(#ffffff, 0.5);
+
+  @media (max-width: $width-desktop) {
+    @include reset-el;
+  }
+}

@@ -1,0 +1,44 @@
+.about__desc {
+  position: relative;
+  padding-left: 20%;
+
+  span {
+    @include text-sets(156px,219px, 700);
+    background-image: url("../img/bg-year.png");
+    background-clip: text;
+    color: transparent;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 0;
+
+    @media (max-width: $width-laptop) {
+      display: none;
+      position: static;
+    }
+  }
+
+  h2 {
+    @include text-sets(36px,50px);
+    color: #666666;
+
+    @media (max-width: $width-desktop) {
+      @include text-correct(32px, 45px);
+    }
+
+    @media (max-width: $width-laptop) {
+      @include text-correct(28px, 39px);
+    }
+  }
+
+  p {
+    @include text-sets(16px,21px);
+    color: #666666;
+  }
+}
+
+.about__button {
+  @include text-sets(14px,16px, 700);
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 5px;
+}

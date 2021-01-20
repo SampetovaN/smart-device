@@ -1,0 +1,23 @@
+.social {
+  p {
+    display: none;
+
+    @media (max-width: $width-desktop) {
+      display: block;
+
+      @include set-mono-text(13px, 24px);
+      color: #1b2d37;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.social__list {
+  @include list-refresh;
+}
+
+.social__logo {
+  .logo__title {
+    color: #203c42;
+  }
+}

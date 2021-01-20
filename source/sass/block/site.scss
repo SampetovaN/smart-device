@@ -1,0 +1,19 @@
+.site {
+  h2 {
+    @include text-sets(15px, 16px);
+    text-transform: uppercase;
+  }
+}
+
+.site__parts {
+  @include list-refresh;
+}
+
+.site__part {
+  a {
+    @include set-mono-text(15px, 25px);
+    color: #1b2d37;
+
+    @include set-hover(#1b2d37);
+  }
+}

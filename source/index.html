@@ -28,35 +28,40 @@
       </a>
       <ul class="main-nav__nav-list site-list">
         <li class="site-list__item">
+          <a href="mailto:info@sd.ru">
           <svg width="19" height="14">
             <use xlink:href="#sprite-email"></use>
           </svg>
-          <a href="mailto:info@sd.ru">info@sd.ru</a>
+            <span>info@sd.ru</span></a>
         </li>
         <li class="site-list__item">
+          <a href="tel:+74950005252">
           <svg width="18" height="18">
             <use xlink:href="#sprite-phone"></use>
           </svg>
-          <a href="tel:+74950005252">+7 (495) 000 52 52</a>
+            <span>+7 (495) 000 52 52</span></a>
         </li>
       </ul>
-      <button class="main-nav__button" type="button">Заказать звонок</button>
+      <a class="button main-nav__button" href="#">Заказать звонок</a>
     </nav>
   </header>
   <main class="main">
     <section class="intro">
       <div class="intro__wrapper">
-        <h1>Печатные платы</h1>
-        <span>производство и монтаж, поставка комплектующих, блоков и модулей</span>
+        <div class="intro__desc">
+          <h1>Печатные платы</h1>
+          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="button intro__button-desc" href="#consult">Получить бесплатную консультацию</a>
+        </div>
+        <a class="button intro__button" href="#advantages">Скролл вниз</a>
       </div>
-      <button class="button intro__button" type="button">Получить бесплатную консультацию</button>
     </section>
     <div class="info">
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="advantages__wrapper">
           <ul class="advantages__list">
-            <li class="advantages__list-item"><a href="#">
+            <li class="advantages__list-item"><a class="advantages__link" href="#">
               <svg width="29" height="35">
                 <use xlink:href="#sprite-stopwatch"></use>
               </svg>
@@ -66,7 +71,7 @@
                   доставлять заказы плат и комплектующих в самые короткие сроки</p>
               </div>
             </a></li>
-            <li class="advantages__list-item"><a href="#">
+            <li class="advantages__list-item"><a class="advantages__link" href="#">
               <svg width="35" height="35">
                 <use xlink:href="#sprite-hired"></use>
               </svg>
@@ -77,7 +82,7 @@
                 </p>
               </div>
             </a></li>
-            <li class="advantages__list-item"><a href="#">
+            <li class="advantages__list-item"><a class="advantages__link" href="#">
               <svg width="36" height="31">
                 <use xlink:href="#sprite-detective"></use>
               </svg>
@@ -87,7 +92,7 @@
               </div>
             </a></li>
 
-            <li class="advantages__list-item"><a href="#">
+            <li class="advantages__list-item"><a class="advantages__link" href="#">
               <svg width="35" height="35">
                 <use xlink:href="#sprite-tag"></use>
               </svg>
@@ -117,21 +122,21 @@
       <h2>Service Device предлагает следующие товары и услуги</h2>
       <ul class="services_list">
         <li class="services_item">
-          <a href="#">
+          <a class="services_link">
             <div class="services_item-wrapper">
               <h3>Производств печатных плат</h3>
             </div>
           </a>
         </li>
         <li class="services_item">
-          <a href="#">
+          <a class="services_link">
             <div class="services_item-wrapper">
               <h3>Монтаж печатных плат</h3>
             </div>
           </a>
         </li>
         <li class="services_item">
-          <a href="#">
+          <a class="services_link">
             <div class="services_item-wrapper">
               <h3>Комплектующие для светотехники</h3>
             </div>
@@ -139,25 +144,30 @@
         </li>
       </ul>
     </section>
-    <section class="consult">
+    <section class="consult" id="consult">
       <div class="consult__wrapper">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class='form consult__form' action='#'>
-          <div class='form__field consult__field'>
-            <label class='visually-hidden' for='user-name'>Ваше имя:</label>
-            <input type='text' name='name' id='user-name' placeholder='Имя' required>
-          </div>
-          <div class='form__field consult__field'>
-            <label class='visually-hidden' for='user-phone'>Ваш номер телефона:</label>
-            <input type='tel' name='phone' id='user-phone' placeholder='Телефон' required>
+        <form class="form consult__form" action="#">
+          <div class="form__up consult__up">
+            <div class="form__field consult__field">
+              <label class="visually-hidden" for="user-name">Ваше имя:</label>
+              <input type="text" name="name" id="user-name" placeholder="Имя" required>
+            </div>
+            <div class="form__field consult__field">
+              <label class="visually-hidden" for="user-phone">Ваш номер телефона:</label>
+              <input type="tel" name="phone" id="user-phone" placeholder="Телефон" required>
+            </div>
+            <div class="form__field consult__field">
+              <textarea class="form__textarea textarea" placeholder="Ваш вопрос" required></textarea>
+            </div>
           </div>
           <div class="form__down consult__down">
-            <button class='button form__button' type='submit'>Подобрать велосипед мечты</button>
-            <div class='consult__checkbox checkbox'>
-              <label class='checkbox__label'>
-                <input type='checkbox' name='add-service' id='service'/>
-                <span class='checkbox__indicator'></span>
+            <button class="button form__button" type="submit">Задать вопрос</button>
+            <div class="consult__checkbox checkbox">
+              <label class="checkbox__label">
+                <input type="checkbox" name="add-service" id="service"/>
+                <span class="checkbox__indicator"></span>
                 Я согласен на обработку персональных данных
               </label>
             </div>
@@ -243,6 +253,41 @@
     </div>
   </footer>
 </div>
+<section class="popup">
+  <div class="popup__wrapper">
+    <button type="button" class="popup__close">
+      <svg class="social__icon" width="16" height="16">
+        <use xlink:href="#sprite-close"></use>
+      </svg>
+    </button>
+    <h2 class="visually-hidden">Форма для обратного звонка</h2>
+    <form class="form popup__form" action="#">
+      <div class="form__up popup__up">
+        <div class="form__field popup__field">
+          <label class="visually-hidden" for="name">Ваше имя:</label>
+          <input type="text" name="user-name" id="name" placeholder="Имя" required="">
+        </div>
+        <div class="form__field popup__field">
+          <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
+          <input type="tel" name="user-phone" id="phone" placeholder="Телефон" required="">
+        </div>
+        <div class="form__field popup__field">
+          <textarea class="form__textarea textarea" placeholder="Ваш вопрос" required=""></textarea>
+        </div>
+      </div>
+      <div class="form__down popup__down">
+        <button class="button form__button" type="submit">Задать вопрос</button>
+        <div class="popup__checkbox checkbox">
+          <label class="checkbox__label">
+            <input type="checkbox" name="add-service" id="popup-service">
+            <span class="checkbox__indicator"></span>
+            Я согласен на обработку персональных данных
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>

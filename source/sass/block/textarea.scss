@@ -1,0 +1,16 @@
+.textarea {
+  background-color: rgba(#00b2ff, 0.1);
+  border-color: transparent;
+  cursor: pointer;
+
+  &::placeholder {
+    @include set-mono-text(16px,21px);
+    color: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #ffffff;
+    outline: transparent;
+  }
+}

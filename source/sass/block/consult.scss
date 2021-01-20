@@ -1,0 +1,21 @@
+.consult {
+  background-color: #00b2ff;
+
+  h2 {
+    @include text-sets(36px,50px);
+    color: #ffffff;
+
+    @media (max-width: $width-desktop) {
+      @include text-correct(32px, 45px);
+    }
+
+    @media (max-width: $width-laptop) {
+      @include text-correct(28px, 39px);
+    }
+  }
+
+  p {
+    @include set-mono-text(16px,21px);
+    color: #ffffff;
+  }
+}

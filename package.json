@@ -36,7 +36,7 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" scss",
     "eslint": "eslint source/js/",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build",

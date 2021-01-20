@@ -45,7 +45,7 @@
   line-height: $height;
 }
 
-@mixin set-opacity-button {
+@mixin set-opacity {
   &:hover,
   &:focus {
     opacity: 0.7;
@@ -54,4 +54,13 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+@mixin set-mono-font {
+  font-family: "PT Mono", "Courier New", monospace;
+}
+
+@mixin set-mono-text($size, $height, $weight:normal) {
+  @include text-sets($size, $height, $weight:normal);
+  font-family: "PT Mono", "Courier New", monospace;
 }
