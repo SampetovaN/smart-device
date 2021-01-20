@@ -1,21 +1,7 @@
 .about__desc {
   position: relative;
   padding-left: 20%;
-
-  span {
-    @include text-sets(156px,219px, 700);
-    background-image: url("../img/bg-year.png");
-    background-clip: text;
-    color: transparent;
-    transform: rotate(90deg);
-    position: absolute;
-    left: 0;
-
-    @media (max-width: $width-laptop) {
-      display: none;
-      position: static;
-    }
-  }
+  padding-bottom: 5%;
 
   h2 {
     @include text-sets(36px,50px);
@@ -33,6 +19,7 @@
   p {
     @include text-sets(16px,21px);
     color: #666666;
+    margin-bottom: 3%;
   }
 }
 
@@ -41,4 +28,20 @@
   color: #00b2ff;
   border: 1px solid #00b2ff;
   border-radius: 5px;
+}
+
+.about__year-wrapper {
+  @include text-sets(156px,219px, 700);
+  background-image: url("../img/year.png");
+  transform: scale(0.9);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  left: 0;
+
+  @media (max-width: $width-laptop) {
+    display: none;
+    position: static;
+  }
 }

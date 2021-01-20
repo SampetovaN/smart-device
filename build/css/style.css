@@ -621,23 +621,8 @@ input[type="radio"],
 
 .about__desc {
   position: relative;
-  padding-left: 20%; }
-  .about__desc span {
-    font-size: 156px;
-    line-height: 219px;
-    font-weight: 700;
-    background-image: url("../img/bg-year.png");
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    position: absolute;
-    left: 0; }
-    @media (max-width: 767px) {
-      .about__desc span {
-        display: none;
-        position: static; } }
+  padding-left: 20%;
+  padding-bottom: 5%; }
   .about__desc h2 {
     font-size: 36px;
     line-height: 50px;
@@ -655,7 +640,8 @@ input[type="radio"],
     font-size: 16px;
     line-height: 21px;
     font-weight: normal;
-    color: #666666; }
+    color: #666666;
+    margin-bottom: 3%; }
 
 .about__button {
   font-size: 14px;
@@ -664,6 +650,23 @@ input[type="radio"],
   color: #00b2ff;
   border: 1px solid #00b2ff;
   border-radius: 5px; }
+
+.about__year-wrapper {
+  font-size: 156px;
+  line-height: 219px;
+  font-weight: 700;
+  background-image: url("../img/year.png");
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  left: 0; }
+  @media (max-width: 767px) {
+    .about__year-wrapper {
+      display: none;
+      position: static; } }
 
 .services {
   background-color: #1b2d37; }
