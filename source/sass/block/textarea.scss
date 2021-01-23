@@ -1,16 +1,13 @@
 .textarea {
-  background-color: rgba(#00b2ff, 0.1);
-  border-color: transparent;
-  cursor: pointer;
+  width: 100%;
+  padding-left: 17px;
+  padding-top: 12px;
+  box-sizing: border-box;
 
-  &::placeholder {
-    @include set-mono-text(16px,21px);
-    color: #ffffff;
-  }
+  @include color-input;
 
-  &:hover,
-  &:focus {
-    border: 1px solid #ffffff;
-    outline: transparent;
+  @media (max-width: $width-desktop) {
+    padding-left: 21px;
+    padding-top: 15px;
   }
 }

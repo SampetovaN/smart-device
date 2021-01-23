@@ -57,13 +57,8 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('build'))
 });
 
-gulp.task('vendor', function () {
-  return gulp.src('source/js/vendor.js')
-    .pipe(gulp.dest('build/js'))
-});
-
 gulp.task('script', function () {
-  return gulp.src(['source/js/*.js','!source/js/vendor.js'])
+  return gulp.src(['source/js/*.js'])
     .pipe(webpackStream(webpackConfig), webpack)
     .pipe(replace(/['"]use strict['"];/g, ''))
     .pipe(wrapper({header: '\'use strict\';\n' }))
@@ -113,6 +108,6 @@ gulp.task('refresh', function (done) {
   done();
 });
 
-gulp.task('build', gulp.series('clean', 'sprite', 'copy', 'css', 'vendor', 'script', 'html'));
+gulp.task('build', gulp.series('clean', 'sprite', 'copy', 'css', 'script', 'html'));
 gulp.task('image', gulp.series('images', 'webp'));
 gulp.task('start', gulp.series('build', 'server'));

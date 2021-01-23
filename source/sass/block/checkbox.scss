@@ -1,9 +1,14 @@
 .checkbox__label {
-  @include set-mono-text(14px, 15px);
+  @include set-mono-text(14px, 14px);
   color: #ffffff;
   padding-left: 25px;
   position: relative;
   cursor: pointer;
+  display: block;
+
+  @media (max-width: $width-desktop) {
+    padding-left: 36px;
+  }
 
   input[type="checkbox"] {
     + .checkbox__indicator {
@@ -12,7 +17,6 @@
       height: 16px;
       background: transparent;
       border: 1px solid #ffffff;
-      border-radius: 3px;
       top: 0;
       left: 0;
     }
@@ -37,6 +41,7 @@
           position: absolute;
           background-image: url("../img/tick.svg");
           background-repeat: no-repeat;
+          background-position: 50%;
           width: 12px;
           height: 9px;
           top: 3px;

@@ -1,5 +1,13 @@
 .logo {
   display: flex;
+
+  svg {
+    margin-right: 18px;
+
+    @media (max-width: $width-laptop) {
+      transform: scale(0.8);
+    }
+  }
 }
 
 .logo__text {
@@ -13,6 +21,6 @@
 }
 
 .logo__translation {
-  @include text-sets(12px,14px, 700);
+  @include text-sets(14px,16px, 700);
   color: #788891;
 }

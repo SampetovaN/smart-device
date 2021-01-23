@@ -2,16 +2,38 @@
   h2 {
     @include text-sets(15px, 16px);
     text-transform: uppercase;
+    margin-bottom: 6%;
+
+    @media (max-width: $width-laptop) {
+      padding-left: 4%;
+      padding-top: 5%;
+    }
+  }
+
+  @media (max-width: $width-laptop) {
+    width: 100%;
   }
 }
 
 .contacts__phones {
   @include list-refresh;
+
+  @media (max-width: $width-laptop) {
+    padding-left: 4%;
+  }
 }
 
 .contacts__info {
   @include set-mono-text(15px, 25px);
   color: #1b2d37;
+
+  p {
+    margin-bottom: 1%;
+
+    @media (max-width: $width-laptop) {
+      padding-left: 4%;
+    }
+  }
 }
 
 .contacts__phone {

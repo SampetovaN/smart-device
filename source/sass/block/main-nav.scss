@@ -1,13 +1,27 @@
 .main-nav {
   display: flex;
+  width: 74%;
+  margin: 0 auto;
+  padding-top: 2%;
+  box-sizing: border-box;
+  align-items: center;
+
+  @media (max-width: $width-desktop) {
+    width: 100%;
+    padding: 3% 3% 0;
+  }
 }
 
 .main-nav__button {
   @include text-sets(14px, 16px, 700);
   color: #ffffff;
-  padding-top: 2%;
   border: 1px solid #ffffff;
   border-radius: 5px;
+  padding: 11px 35px 13px;
+
+  @media (max-width: $width-desktop) {
+    display: none;
+  }
 }
 
 .main-nav__logo {
@@ -15,5 +29,19 @@
     .logo__text {
       display: none;
     }
+  }
+}
+
+.main-nav__nav-list {
+  @include list-refresh;
+  margin-left: auto;
+  width: 36%;
+  margin-bottom: 1%;
+  padding-right: 1%;
+  justify-content: space-around;
+
+  @media (max-width: $width-desktop) {
+    width: 40%;
+    justify-content: flex-end;
   }
 }

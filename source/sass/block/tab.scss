@@ -1,0 +1,52 @@
+.tab {
+  @media (max-width: $width-laptop) {
+    &--closed {
+      .tab__content {
+        display: none;
+      }
+
+      .tab__button {
+        background-image: url("../img/plus.svg");
+        margin-top: 25px;
+      }
+    }
+
+    &--opened {
+      .tab__button {
+
+        background-image: url("../img/minus.svg");
+        margin-top: 35px;
+      }
+
+      .tab__content {
+        display: block;
+      }
+    }
+  }
+}
+
+.tab__toggle {
+  @media (max-width: $width-laptop) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3%;
+    box-sizing: border-box;
+  }
+}
+
+.tab__button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @include set-opacity;
+
+  @media (max-width: $width-laptop) {
+    display: block;
+  }
+}

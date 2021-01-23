@@ -1,19 +1,62 @@
 .site {
+  width: 57%;
+
   h2 {
     @include text-sets(15px, 16px);
     text-transform: uppercase;
+    margin-bottom: 4%;
+    padding-left: 2%;
+
+    @media (max-width: $width-desktop) {
+      margin-bottom: 10%;
+    }
+
+    @media (max-width: $width-laptop) {
+      margin-top: 6%;
+      font-size: 16px;
+      margin-bottom: 0;
+      padding: 0 4% 10%;
+    }
+  }
+
+  @media (max-width: $width-desktop) {
+    width: auto;
+    min-width: 294px;
+  }
+
+  @media (max-width: $width-laptop) {
+    width: 100%;
+    padding-bottom: 8%;
+    border-bottom: 1px solid rgba(#626962, 0.2);
   }
 }
 
 .site__parts {
   @include list-refresh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 111px;
+  padding-right: 11%;
+
+  @media (max-width: $width-desktop) {
+    height: auto;
+  }
+
+  @media (max-width: $width-laptop) {
+    padding-left: 4%;
+  }
 }
 
 .site__part {
   a {
-    @include set-mono-text(15px, 25px);
+    @include set-mono-text(15px, 21px);
     color: #1b2d37;
+    padding-right: 27px;
 
     @include set-hover(#1b2d37);
+    margin-bottom: -2%;
   }
+
+  line-height: 21px;
 }

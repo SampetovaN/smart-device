@@ -64,3 +64,33 @@
   @include text-sets($size, $height, $weight:normal);
   font-family: "PT Mono", "Courier New", monospace;
 }
+
+@mixin color-input {
+  border-color: transparent;
+  cursor: pointer;
+  background-color: #19baff;
+
+  &:hover,
+  &:focus {
+    background-color: #65ccf7;
+    outline: transparent;
+
+    &::placeholder {
+      background-color: #65ccf7;
+    }
+  }
+
+  &:active {
+    background-color: #a9dff5;
+
+    &::placeholder {
+      background-color: #a9dff5;
+    }
+  }
+
+  &::placeholder {
+    @include set-mono-text(16px, 21px);
+    background-color: #19baff;
+    color: #ffffff;
+  }
+}

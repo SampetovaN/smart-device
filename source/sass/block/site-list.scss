@@ -1,6 +1,6 @@
 .site-list {
-  @include list-refresh;
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .site-list__item {
@@ -15,5 +15,25 @@
     @media (max-width: $width-desktop) {
       @include reset-el;
     }
+  }
+
+  @media (max-width: $width-desktop) {
+    margin-right: 12%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: block;
+    }
+
+    svg {
+      transform: scale(1.4);
+    }
+  }
+
+  @media (max-width: $width-laptop) {
+    margin-right: 35px;
   }
 }
