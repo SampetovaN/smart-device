@@ -10,7 +10,7 @@
   <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="body">
 <div style="display: none">
   <include src="build/img/sprite.svg"></include>
 </div>
@@ -63,7 +63,7 @@
         <div class="advantages__wrapper">
           <ul class="advantages__list">
             <li class="advantages__list-item">
-              <a href="#" class="advantages__link">
+              <a class="advantages__link">
               <svg class="svg_hover" width="29" height="35">
                 <use xlink:href="#sprite-stopwatch"></use>
               </svg>
@@ -73,7 +73,7 @@
                   доставлять заказы плат и комплектующих в самые короткие сроки</p>
               </div>
             </a></li>
-            <li class="advantages__list-item"><a href="#" class="advantages__link">
+            <li class="advantages__list-item"><a class="advantages__link">
               <svg width="35" height="35">
                 <use xlink:href="#sprite-hired"></use>
               </svg>
@@ -84,7 +84,7 @@
                 </p>
               </div>
             </a></li>
-            <li class="advantages__list-item"><a href="#" class="advantages__link">
+            <li class="advantages__list-item"><a class="advantages__link">
               <svg width="36" height="31">
                 <use xlink:href="#sprite-detective"></use>
               </svg>
@@ -94,7 +94,7 @@
               </div>
             </a></li>
 
-            <li class="advantages__list-item"><a href="#" class="advantages__link">
+            <li class="advantages__list-item"><a class="advantages__link">
               <svg width="35" height="35">
                 <use xlink:href="#sprite-tag"></use>
               </svg>
@@ -157,14 +157,14 @@
                 <label class="visually-hidden" for="user-name">Ваше имя:</label>
                 <input type="text" name="name" id="user-name" placeholder="Имя" required>
               </li>
-              <li class="form__input consult__input">
+              <li class="form__input form__input--phone consult__input">
                 <label class="visually-hidden" for="user-phone">Ваш номер телефона:</label>
-                <input type="tel" name="phone" id="user-phone" placeholder="Телефон" required>
+                <input type="text" name="phone" id="user-phone" placeholder="Телефон" required pattern='^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$'>
               </li>
             </ul>
             <div class="form__textarea consult__textarea">
               <label for="question-consult" class="visually-hidden">Напишите ваш вопрос:</label>
-              <textarea class="textarea" id="question-consult" placeholder="Ваш вопрос" required></textarea>
+              <textarea class="textarea consult__textarea-input" name="question-consult" id="question-consult" placeholder="Ваш вопрос" required></textarea>
             </div>
           </div>
           <div class="form__down consult__down">
@@ -219,7 +219,7 @@
           </li>
         </ul>
       </section>
-      <div class="footer__main-info main-info">
+      <div class="footer__main-info main-info main-info--nojs">
         <section class="site">
           <div class="tab site__tab">
             <div class="tab__toggle">
@@ -268,31 +268,35 @@
     </div>
   </footer>
 </div>
-<section class="popup">
+<section class="popup popup--closed">
   <div class="popup__wrapper">
     <button type="button" class="popup__close">
-      <svg class="social__icon" width="16" height="16">
+      <svg width="16" height="16">
         <use xlink:href="#sprite-close"></use>
       </svg>
     </button>
+    <h2>Закажите звонок</h2>
+    <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <h2 class="visually-hidden">Форма для обратного звонка</h2>
     <form class="form popup__form" action="#">
-      <div class="form__up popup__up">
-        <div class="form__field popup__field">
-          <label class="visually-hidden" for="name">Ваше имя:</label>
-          <input type="text" name="user-name" id="name" placeholder="Имя" required>
-        </div>
-        <div class="form__field popup__field">
-          <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
-          <input type="tel" name="user-phone" id="phone" placeholder="Телефон" required>
-        </div>
-        <div class="form__field popup__field">
+      <div class="form__up popup_up">
+        <ul class="form__input-list popup__input-list">
+          <li class="form__input popup__input">
+            <label class="visually-hidden" for="name">Ваше имя:</label>
+            <input type="text" name="user-name" id="name" placeholder="Имя" required>
+          </li>
+          <li class="form__input form__input--phone popup__input">
+            <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
+            <input type="text" name="user-phone" id="phone" placeholder="Телефон" required pattern='^(\+?\d)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}([\s\-]?[0-9]{2}){2}$'>
+          </li>
+        </ul>
+        <div class="form__textarea popup__textarea">
           <label for="question" class="visually-hidden">Напишите ваш вопрос:</label>
-          <textarea class="form__textarea textarea"  id="question" placeholder="Ваш вопрос" required></textarea>
+          <textarea class="popup__textarea-input textarea" name="question" id="question" placeholder="Ваш вопрос" required></textarea>
         </div>
       </div>
       <div class="form__down popup__down">
-        <button class="button form__button" type="submit">Задать вопрос</button>
+        <button class="button form__button popup__button" type="submit">Отправить</button>
         <div class="popup__checkbox checkbox">
           <label class="checkbox__label">
             <input type="checkbox" name="add-service" id="popup-service">
@@ -306,3 +310,4 @@
 </section>
 <script src="js/main.js"></script>
 </body>
+</html>

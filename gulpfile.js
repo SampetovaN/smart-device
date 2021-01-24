@@ -27,7 +27,7 @@ gulp.task('clean', function () {
 
 gulp.task('images', function () {
   return gulp.src('source/img/**/*.{png,jpg,svg}')
-    .pipe(imagemin([imagemin.optipng({optimizationLevel: 3}),
+    .pipe(imagemin([imagemin.optipng({optimizationLevel: 6}),
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()]))
     .pipe(gulp.dest('source/img'));

@@ -1,3 +1,7 @@
+.advantages {
+  scroll-behavior: smooth;
+}
+
 .advantages__list {
   @include list-refresh;
   display: flex;
@@ -43,20 +47,26 @@
     min-height: 233px;
   }
 
+  svg {
+    fill: #00b2ff;
+  }
+
   &:hover,
   &:focus {
     border: 1px solid #00b2ff;
     border-left: 3px solid #00b2ff;
     background-color: #00b2ff;
 
-    .advantages__desc {
-      h3 {
-        color: #ffffff;
-      }
+    h3 {
+      color: #ffffff;
+    }
 
-      p {
-        color: #ffffff;
-      }
+    p {
+      color: #ffffff;
+    }
+
+    svg {
+      fill: #ffffff;
     }
   }
 
@@ -65,14 +75,17 @@
     border-left: 3px solid #00b2ff;
     background-color: #00b2ff;
 
-    .advantages__desc {
-      h3 {
-        color: rgba(#ffffff, 0.3);
-      }
+    h3 {
+      color: rgba(#ffffff, 0.3);
+    }
 
-      p {
-        color: #ffffff;
-      }
+    p {
+      color: rgba(#ffffff, 0.3);
+    }
+
+    svg {
+      fill: #ffffff;
+      opacity: 0.3;
     }
   }
 }

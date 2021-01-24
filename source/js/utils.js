@@ -9,8 +9,12 @@
       action(evt);
     }
   };
+  var formArray = function (nodes) {
+    return [].slice.call(nodes);
+  };
 
   window.utils = {
-    isEscEvent: isEscEvent
+    isEscEvent: isEscEvent,
+    formArray: formArray,
   };
 })();

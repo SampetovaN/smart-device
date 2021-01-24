@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-size: 36%;
   background-position: 14% 50%;
+  scroll-behavior: smooth;
 
   @media (width: $width-desktop-pattern) {
     background-position: 14% -61px;
@@ -158,5 +159,18 @@
 
   @media (max-width: $width-laptop) {
     width: 100%;
+  }
+}
+
+.consult__textarea-input {
+  max-width: 570px;
+
+  @media (max-width: $width-desktop) {
+    width: 590px;
+    max-width: none;
+  }
+
+  @media (max-width: $width-laptop) {
+    width: 290px;
   }
 }

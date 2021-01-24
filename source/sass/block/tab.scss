@@ -7,19 +7,7 @@
 
       .tab__button {
         background-image: url("../img/plus.svg");
-        margin-top: 25px;
-      }
-    }
-
-    &--opened {
-      .tab__button {
-
-        background-image: url("../img/minus.svg");
-        margin-top: 35px;
-      }
-
-      .tab__content {
-        display: block;
+        height: 16px;
       }
     }
   }
@@ -30,8 +18,10 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 3%;
     box-sizing: border-box;
+    align-items: center;
+    margin-top: 5%;
+    padding: 0 3% 4%;
   }
 }
 
@@ -40,7 +30,7 @@
   background-color: transparent;
   border: none;
   width: 16px;
-  height: 16px;
+  height: 6px;
   background-repeat: no-repeat;
   cursor: pointer;
 
@@ -48,5 +38,10 @@
 
   @media (max-width: $width-laptop) {
     display: block;
+    background-image: url("../img/minus.svg");
   }
+}
+
+.tab__content {
+  display: block;
 }

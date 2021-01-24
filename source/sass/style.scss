@@ -3,6 +3,7 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
+@import "block/body.scss";
 @import "block/visually-hidden.scss";
 @import "block/content.scss";
 @import "block/checkbox.scss";
@@ -16,9 +17,9 @@
 @import "block/advantages.scss";
 @import "block/about.scss";
 @import "block/services.scss";
+@import "block/textarea.scss";
 @import "block/consult.scss";
 @import "block/form.scss";
-@import "block/textarea.scss";
 @import "block/footer.scss";
 @import "block/main-info.scss";
 @import "block/tab.scss";

@@ -11,29 +11,28 @@
   }
 
   @media (max-width: $width-laptop) {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 
   &--nojs {
     @media (max-width: $width-laptop) {
       border-bottom: 0;
-    }
 
-    .h2 {
-      border: none;
-    }
+      .h2 {
+        border: none;
+      }
 
-    .tab__toggle {
-      display: block;
-    }
+      .tab__toggle {
+        display: block;
+      }
 
-    .tab__button {
-      display: none;
-    }
+      .tab__button {
+        display: none;
+      }
 
-    .tab__content {
-      display: block;
+      .tab__content {
+        display: block;
+      }
     }
   }
 }
