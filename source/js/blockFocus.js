@@ -11,18 +11,19 @@
     node.tabIndex = COMMON_TABINDEX;
   };
   var blockTab = function () {
-    if(nonInteractiveItems)[].slice.call(nonInteractiveItems).forEach(unsetTabindex);
-  }
+    if (nonInteractiveItems) {
+      [].slice.call(nonInteractiveItems).forEach(unsetTabindex);
+    }
+  };
   var unblockTab = function () {
-    if(nonInteractiveItems)[].slice.call(nonInteractiveItems).forEach(setTabindex);
-  }
+    if (nonInteractiveItems) {
+      [].slice.call(nonInteractiveItems).forEach(setTabindex);
+    }
+  };
   window.blockFocus = {
     set: blockTab,
     unset: unblockTab,
-  }
+  };
 })();
-
-
-
 
 

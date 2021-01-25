@@ -3,7 +3,7 @@
 (function () {
   var PHONE_INPUT_TAG = 'form__input--phone input';
   var INVALID_PHONE_MESSAGE = 'Пожалуйста, введите номер телефона в формате 8-xxx-xxx-xx-xx';
- var mask = require('imask');
+  var mask = require('imask');
   var MaskOptions = {
     mask: '+{7}(000)000-00-00'
   };
@@ -21,7 +21,7 @@
       if (inputPhone) {
         new mask.InputMask(inputPhone, MaskOptions);
         inputPhone.addEventListener('input', function (evt) {
-         checkInputPhone(evt.target);
+          checkInputPhone(evt.target);
         });
       }
       form.addEventListener('submit', function (evt) {

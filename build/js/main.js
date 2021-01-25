@@ -407,7 +407,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var NEGATIVE_TABINDEX = -1;\n  var COMMON_TABINDEX = 0;\n  var nonInteractiveItems = document.querySelectorAll('.header a, .header button, .main a, .main button, .footer a, .footer button');\n\n  var unsetTabindex = function (node) {\n    node.tabIndex = NEGATIVE_TABINDEX;\n  };\n\n  var setTabindex = function (node) {\n    node.tabIndex = COMMON_TABINDEX;\n  };\n\n  var blockTab = function () {\n    if (nonInteractiveItems) [].slice.call(nonInteractiveItems).forEach(unsetTabindex);\n  };\n\n  var unblockTab = function () {\n    if (nonInteractiveItems) [].slice.call(nonInteractiveItems).forEach(setTabindex);\n  };\n\n  window.blockFocus = {\n    set: blockTab,\n    unset: unblockTab\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/blockFocus.js?");
+eval("\n\n(function () {\n  var NEGATIVE_TABINDEX = -1;\n  var COMMON_TABINDEX = 0;\n  var nonInteractiveItems = document.querySelectorAll('.header a, .header button, .main a, .main button, .footer a, .footer button');\n\n  var unsetTabindex = function (node) {\n    node.tabIndex = NEGATIVE_TABINDEX;\n  };\n\n  var setTabindex = function (node) {\n    node.tabIndex = COMMON_TABINDEX;\n  };\n\n  var blockTab = function () {\n    if (nonInteractiveItems) {\n      [].slice.call(nonInteractiveItems).forEach(unsetTabindex);\n    }\n  };\n\n  var unblockTab = function () {\n    if (nonInteractiveItems) {\n      [].slice.call(nonInteractiveItems).forEach(setTabindex);\n    }\n  };\n\n  window.blockFocus = {\n    set: blockTab,\n    unset: unblockTab\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/blockFocus.js?");
 
 /***/ }),
 
