@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   background-size: 36%;
   background-position: 14% 50%;
-  scroll-behavior: smooth;
 
   @media (width: $width-desktop-pattern) {
     background-position: 14% -61px;
@@ -33,6 +32,7 @@
     @media (max-width: $width-desktop) {
       @include text-correct(32px, 45px);
       padding-top: 13%;
+      padding-left: 0;
     }
 
     @media (max-width: $width-laptop) {

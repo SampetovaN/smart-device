@@ -4,12 +4,9 @@
 
 .footer__wrapper {
   padding: 3.1% 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
 
   @media (max-width: $width-desktop) {
-    flex-direction: column;
     width: 100%;
     padding: 3.2% 0 0;
   }
@@ -19,9 +16,23 @@
   }
 }
 
+.footer__up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 13.1%;
+
+  @media (max-width: $width-desktop) {
+    display: block;
+    padding: 0;
+  }
+}
+
+
 .footer__copyright {
   flex-grow: 2;
   width: 100%;
+  box-sizing: border-box;
   padding: 0 13.1%;
 
   @media (max-width: $width-desktop) {
@@ -30,17 +41,9 @@
   }
 }
 
-.footer__main-info {
-  padding-right: 13.1%;
-
-  @media (max-width: $width-desktop) {
-    padding: 0;
-  }
-}
-
 .footer__social {
-  padding-left: 13.1%;
   padding-bottom: 3%;
+  padding-right: 3%;
 
   @media (max-width: $width-desktop) {
     padding: 0;

@@ -17,7 +17,8 @@
       }
     };
 
-    var onClickPopupButton = function () {
+    var onClickPopupButton = function (evt) {
+      evt.preventDefault();
       popup.classList.remove(TAG_CLOSED);
       window.scrollBlock.set();
       window.blockFocus.set();

@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+  var FORM_POPUP = '.popup__form';
+  var FORM_CONSULT = '.consult__form';
   var isStorageSupp = true;
   var storageNamePopup = '';
   var storagePhonePopup = '';
@@ -8,8 +10,6 @@
   var storageNameConsult = '';
   var storagePhoneConsult = '';
   var storagePhoneMessage = '';
-  var FORM_POPUP = '.popup__form';
-  var FORM_CONSULT = '.consult__form';
   var inputNamePopup = document.querySelector('#name');
   var inputPhonePopup = document.querySelector('#phone');
   var inputMessagePopup = document.querySelector('#question');

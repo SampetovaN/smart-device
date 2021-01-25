@@ -10,7 +10,8 @@
     }
   };
 
+
   window.utils = {
-    isEscEvent: isEscEvent,
+    isEscEvent: isEscEvent
   };
 })();

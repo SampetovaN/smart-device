@@ -19,6 +19,7 @@
     background-size: cover, 44%;
     padding-left: 2%;
     padding-right: 17%;
+    padding-bottom: 22%;
   }
 
   @media (max-width: $width-laptop) {
@@ -29,6 +30,7 @@
     background-size: cover, 93%;
     padding-left: 4%;
     padding-right: 4%;
+    padding-bottom: 21%;
   }
 }
 
@@ -61,13 +63,11 @@
     width: 77%;
     margin-right: 0;
     margin-top: 11%;
-    padding-bottom: 27%;
   }
 
   @media (max-width: $width-laptop) {
     width: 100%;
     margin-top: 79%;
-    padding-bottom: 24%;
   }
 }
 
@@ -169,11 +169,10 @@
   color: rgba(#ffffff, 0.5);
   position: absolute;
   transform: rotate(270deg);
-/*  bottom: 21%;
-  left: -4%;*/
   bottom: 15%;
   text-transform: none;
   left: 11%;
+
   @include set-hover(#ffffff);
 
   @media (max-width: $width-desktop) {

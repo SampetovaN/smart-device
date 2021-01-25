@@ -21,6 +21,7 @@ var webpack = require('webpack');
 var webpackStream = require('webpack-stream');
 var webpackConfig = require('./webpack.config.js');
 
+
 gulp.task('clean', function () {
   return del('build');
 });
@@ -64,7 +65,6 @@ gulp.task('script', function () {
     .pipe(wrapper({header: '\'use strict\';\n' }))
     .pipe(gulp.dest('build/js'));
 });
-
 
 gulp.task('html', function () {
   return gulp.src('source/*.html')

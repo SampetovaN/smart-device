@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 52%;
+  width: 71%;
 
   @media (max-width: $width-desktop) {
     width: 100%;
@@ -27,7 +27,21 @@
       }
 
       .tab__button {
-        display: none;
+        tab-index: -1;
+        position: static;
+        cursor: unset;
+        &:active {
+          opacity: 1;
+        }
+        &:hover,
+        &:focus, {
+          opacity: 1;
+        }
+        &:after {
+          display: none;
+          position: static;
+        }
+
       }
 
       .tab__content {

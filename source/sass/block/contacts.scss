@@ -7,10 +7,11 @@
     margin-bottom: 6%;
 
     @media (max-width: $width-laptop) {
-      padding-left: 4%;
+/*      padding-left: 4%;
       padding-top: 0;
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 0;*/
+      display: none;
     }
   }
 
@@ -49,6 +50,8 @@
   a {
     @include set-mono-text(15px, 25px);
     color: #1b2d37;
+    display: inline-block;
+    vertical-align: unset;
 
     @include set-hover(#1b2d37);
   }

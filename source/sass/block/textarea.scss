@@ -3,7 +3,9 @@
   padding-left: 17px;
   padding-top: 12px;
   box-sizing: border-box;
+  resize: none;
 
+  @include set-mono-text(16px,14px);
   @include color-input;
 
   @media (max-width: $width-desktop) {

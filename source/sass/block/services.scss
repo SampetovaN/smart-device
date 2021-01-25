@@ -1,6 +1,6 @@
 .services {
   background-color: #1b2d37;
-  padding: 0 19% 6.6%;
+  padding: 0 19% 4.1%;
 
   @media (max-width: $width-desktop) {
     padding: 0 2% 4.6%;
@@ -38,6 +38,7 @@
   @include list-refresh;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   @media (max-width: $width-desktop) {
     flex-direction: column;
@@ -47,6 +48,7 @@
 
 .services_item {
   width: 31%;
+  margin-bottom: 4%;
 
   @media (max-width: $width-desktop) {
     width: 100%;

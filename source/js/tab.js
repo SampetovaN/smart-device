@@ -2,6 +2,7 @@
 
 (function () {
   var TAB_CLOSE_TAG = 'tab--closed';
+  var TAB_OPEN_TAG = 'tab--opened';
   var NO_JS_TAG = 'main-info--nojs';
   var BUTTON_TAG = 'tab__button';
   var TAB_TAG = 'tab';
@@ -10,9 +11,15 @@
   if (mainInfo && tabs) {
     mainInfo.classList.remove(NO_JS_TAG);
     var onClickTabButton = function (button) {
-      button.closest('.' + TAB_TAG).classList.toggle(TAB_CLOSE_TAG);
+      var closestButton = button.closest('.' + TAB_TAG);
+      if(closestButton.classList.contains(TAB_CLOSE_TAG)) {
+        closestButton.classList.remove(TAB_CLOSE_TAG)
+        closestButton.classList.add(TAB_OPEN_TAG)
+      } else {
+        closestButton.classList.remove(TAB_OPEN_TAG)
+        closestButton.classList.add(TAB_CLOSE_TAG)
+      }
     };
-
     [].slice.call(tabs).forEach(function (tab) {
       tab.classList.add(TAB_CLOSE_TAG);
       tab.addEventListener('click', function (evt) {
