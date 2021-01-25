@@ -20,6 +20,7 @@
     var onClickPopupButton = function () {
       popup.classList.remove(TAG_CLOSED);
       window.scrollBlock.set();
+      window.blockFocus.set();
       var inputName = popup.querySelector('#name');
       inputName.focus();
       document.addEventListener('keydown', onEscKeyDown);
@@ -32,6 +33,7 @@
     };
     var onCloseButton = function () {
       popup.classList.add(TAG_CLOSED);
+      window.blockFocus.unset();
       window.scrollBlock.unset();
       buttonPopup.addEventListener('click', onClickPopupButton);
       content.removeEventListener('click', isPopupButtonClickEvent);

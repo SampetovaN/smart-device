@@ -399,6 +399,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 
 /***/ }),
 
+/***/ "./source/js/blockFocus.js":
+/*!*********************************!*\
+  !*** ./source/js/blockFocus.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+eval("\n\n(function () {\n  var NEGATIVE_TABINDEX = -1;\n  var COMMON_TABINDEX = 0;\n  var nonInteractiveItems = document.querySelectorAll('.header a, .header button, .main a, .main button, .footer a, .footer button');\n\n  var unsetTabindex = function (node) {\n    node.tabIndex = NEGATIVE_TABINDEX;\n  };\n\n  var setTabindex = function (node) {\n    node.tabIndex = COMMON_TABINDEX;\n  };\n\n  var blockTab = function () {\n    if (nonInteractiveItems) [].slice.call(nonInteractiveItems).forEach(unsetTabindex);\n  };\n\n  var unblockTab = function () {\n    if (nonInteractiveItems) [].slice.call(nonInteractiveItems).forEach(setTabindex);\n  };\n\n  window.blockFocus = {\n    set: blockTab,\n    unset: unblockTab\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/blockFocus.js?");
+
+/***/ }),
+
 /***/ "./source/js/form.js":
 /*!***************************!*\
   !*** ./source/js/form.js ***!
@@ -407,7 +419,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rol
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var PHONE_INPUT_TAG = 'form__input--phone input';\n  var INVALID_PHONE_MESSAGE = 'Пожалуйста, введите номер телефона в формате 8-xxx-xxx-xx-xx';\n\n  var mask = __webpack_require__(/*! imask */ \"./node_modules/imask/esm/index.js\");\n\n  var MaskOptions = {\n    mask: '+{7}(000)000-00-00'\n  };\n\n  var checkInputPhone = function (inputPhone) {\n    if (inputPhone.validity.patternMismatch) {\n      inputPhone.setCustomValidity(INVALID_PHONE_MESSAGE);\n    } else {\n      inputPhone.setCustomValidity('');\n    }\n  };\n\n  var forms = document.querySelectorAll('.form');\n\n  if (forms) {\n    forms.forEach(function (form) {\n      var inputPhone = form.querySelector('.' + PHONE_INPUT_TAG);\n\n      if (inputPhone) {\n        new mask.InputMask(inputPhone, MaskOptions);\n        inputPhone.addEventListener('input', function (evt) {\n          checkInputPhone(evt.target);\n        });\n      }\n\n      form.addEventListener('submit', function (evt) {\n        evt.preventDefault();\n        window.localStorageData.set(evt);\n        form.reset();\n      });\n    });\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/form.js?");
+eval("\n\n(function () {\n  var PHONE_INPUT_TAG = 'form__input--phone input';\n  var INVALID_PHONE_MESSAGE = 'Пожалуйста, введите номер телефона в формате 8-xxx-xxx-xx-xx';\n\n  var mask = __webpack_require__(/*! imask */ \"./node_modules/imask/esm/index.js\");\n\n  var MaskOptions = {\n    mask: '+{7}(000)000-00-00'\n  };\n\n  var checkInputPhone = function (inputPhone) {\n    if (inputPhone.validity.patternMismatch) {\n      inputPhone.setCustomValidity(INVALID_PHONE_MESSAGE);\n    } else {\n      inputPhone.setCustomValidity('');\n    }\n  };\n\n  var forms = document.querySelectorAll('.form');\n\n  if (forms) {\n    [].slice.call(forms).forEach(function (form) {\n      var inputPhone = form.querySelector('.' + PHONE_INPUT_TAG);\n\n      if (inputPhone) {\n        new mask.InputMask(inputPhone, MaskOptions);\n        inputPhone.addEventListener('input', function (evt) {\n          checkInputPhone(evt.target);\n        });\n      }\n\n      form.addEventListener('submit', function (evt) {\n        evt.preventDefault();\n        window.localStorageData.set(evt);\n        form.reset();\n      });\n    });\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/form.js?");
 
 /***/ }),
 
@@ -431,7 +443,7 @@ eval("\n\n(function () {\n  var isStorageSupp = true;\n  var storageNamePopup = 
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var TAG_CLOSED = 'popup--closed';\n  var BUTTON_POPUP_TAG = 'main-nav__button';\n  var buttonPopup = document.querySelector('.' + BUTTON_POPUP_TAG);\n  var content = document.querySelector('.content');\n  var popup = document.querySelector('.popup');\n  var closeButton = document.querySelector('.popup__close');\n\n  if (buttonPopup && popup && content) {\n    var onEscKeyDown = function (evt) {\n      window.utils.isEscEvent(evt, onCloseButton);\n    };\n\n    var isPopupButtonClickEvent = function (evt) {\n      if (!evt.target.classList.contains(BUTTON_POPUP_TAG)) {\n        onCloseButton();\n      }\n    };\n\n    var onClickPopupButton = function () {\n      popup.classList.remove(TAG_CLOSED);\n      window.scrollBlock.set();\n      var inputName = popup.querySelector('#name');\n      inputName.focus();\n      document.addEventListener('keydown', onEscKeyDown);\n\n      if (closeButton) {\n        closeButton.addEventListener('click', onCloseButton);\n      }\n\n      content.addEventListener('click', isPopupButtonClickEvent);\n      buttonPopup.removeEventListener('click', onClickPopupButton);\n    };\n\n    var onCloseButton = function () {\n      popup.classList.add(TAG_CLOSED);\n      window.scrollBlock.unset();\n      buttonPopup.addEventListener('click', onClickPopupButton);\n      content.removeEventListener('click', isPopupButtonClickEvent);\n\n      if (closeButton) {\n        closeButton.removeEventListener('click', onCloseButton);\n      }\n    };\n\n    buttonPopup.addEventListener('click', onClickPopupButton);\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/popup.js?");
+eval("\n\n(function () {\n  var TAG_CLOSED = 'popup--closed';\n  var BUTTON_POPUP_TAG = 'main-nav__button';\n  var buttonPopup = document.querySelector('.' + BUTTON_POPUP_TAG);\n  var content = document.querySelector('.content');\n  var popup = document.querySelector('.popup');\n  var closeButton = document.querySelector('.popup__close');\n\n  if (buttonPopup && popup && content) {\n    var onEscKeyDown = function (evt) {\n      window.utils.isEscEvent(evt, onCloseButton);\n    };\n\n    var isPopupButtonClickEvent = function (evt) {\n      if (!evt.target.classList.contains(BUTTON_POPUP_TAG)) {\n        onCloseButton();\n      }\n    };\n\n    var onClickPopupButton = function () {\n      popup.classList.remove(TAG_CLOSED);\n      window.scrollBlock.set();\n      window.blockFocus.set();\n      var inputName = popup.querySelector('#name');\n      inputName.focus();\n      document.addEventListener('keydown', onEscKeyDown);\n\n      if (closeButton) {\n        closeButton.addEventListener('click', onCloseButton);\n      }\n\n      content.addEventListener('click', isPopupButtonClickEvent);\n      buttonPopup.removeEventListener('click', onClickPopupButton);\n    };\n\n    var onCloseButton = function () {\n      popup.classList.add(TAG_CLOSED);\n      window.blockFocus.unset();\n      window.scrollBlock.unset();\n      buttonPopup.addEventListener('click', onClickPopupButton);\n      content.removeEventListener('click', isPopupButtonClickEvent);\n\n      if (closeButton) {\n        closeButton.removeEventListener('click', onCloseButton);\n      }\n    };\n\n    buttonPopup.addEventListener('click', onClickPopupButton);\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/popup.js?");
 
 /***/ }),
 
@@ -455,7 +467,7 @@ eval("\n\n(function () {\n  var BODY_LOCK_CLASS = 'body--lock';\n  var body = do
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var TAB_CLOSE_TAG = 'tab--closed';\n  var NO_JS_TAG = 'main-info--nojs';\n  var BUTTON_TAG = 'tab__button';\n  var TAB_TAG = 'tab';\n  var mainInfo = document.querySelector('.main-info');\n  var tabs = document.querySelectorAll('.tab');\n\n  if (mainInfo && tabs) {\n    mainInfo.classList.remove(NO_JS_TAG);\n\n    var onClickTabButton = function (button) {\n      button.closest('.' + TAB_TAG).classList.toggle(TAB_CLOSE_TAG);\n    };\n\n    tabs.forEach(function (tab) {\n      tab.classList.add(TAB_CLOSE_TAG);\n      tab.addEventListener('click', function (evt) {\n        if (evt.target.classList.contains(BUTTON_TAG)) {\n          onClickTabButton(evt.target);\n        }\n      });\n    });\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/tab.js?");
+eval("\n\n(function () {\n  var TAB_CLOSE_TAG = 'tab--closed';\n  var NO_JS_TAG = 'main-info--nojs';\n  var BUTTON_TAG = 'tab__button';\n  var TAB_TAG = 'tab';\n  var mainInfo = document.querySelector('.main-info');\n  var tabs = document.querySelectorAll('.tab');\n\n  if (mainInfo && tabs) {\n    mainInfo.classList.remove(NO_JS_TAG);\n\n    var onClickTabButton = function (button) {\n      button.closest('.' + TAB_TAG).classList.toggle(TAB_CLOSE_TAG);\n    };\n\n    [].slice.call(tabs).forEach(function (tab) {\n      tab.classList.add(TAB_CLOSE_TAG);\n      tab.addEventListener('click', function (evt) {\n        if (evt.target.classList.contains(BUTTON_TAG)) {\n          onClickTabButton(evt.target);\n        }\n      });\n    });\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/tab.js?");
 
 /***/ }),
 
@@ -467,18 +479,18 @@ eval("\n\n(function () {\n  var TAB_CLOSE_TAG = 'tab--closed';\n  var NO_JS_TAG 
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var ESCAPE_BUTTON = 'Escape';\n\n  var isEscEvent = function (evt, action) {\n    if (evt.key === ESCAPE_BUTTON) {\n      evt.preventDefault();\n      action(evt);\n    }\n  };\n\n  var formArray = function (nodes) {\n    return [].slice.call(nodes);\n  };\n\n  window.utils = {\n    isEscEvent: isEscEvent,\n    formArray: formArray\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/utils.js?");
+eval("\n\n(function () {\n  var ESCAPE_BUTTON = 'Escape';\n\n  var isEscEvent = function (evt, action) {\n    if (evt.key === ESCAPE_BUTTON) {\n      evt.preventDefault();\n      action(evt);\n    }\n  };\n\n  window.utils = {\n    isEscEvent: isEscEvent\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/utils.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************************************************************!*\
-  !*** multi ./source/js/form.js ./source/js/localStorageData.js ./source/js/popup.js ./source/js/scrollBlock.js ./source/js/tab.js ./source/js/utils.js ***!
-  \*********************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** multi ./source/js/blockFocus.js ./source/js/form.js ./source/js/localStorageData.js ./source/js/popup.js ./source/js/scrollBlock.js ./source/js/tab.js ./source/js/utils.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\form.js */\"./source/js/form.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\localStorageData.js */\"./source/js/localStorageData.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\popup.js */\"./source/js/popup.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\scrollBlock.js */\"./source/js/scrollBlock.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\tab.js */\"./source/js/tab.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\utils.js */\"./source/js/utils.js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/form.js_./source/js/localStorageData.js_./source/js/popup.js_./source/js/scrollBlock.js_./source/js/tab.js_./source/js/utils.js?");
+eval("__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\blockFocus.js */\"./source/js/blockFocus.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\form.js */\"./source/js/form.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\localStorageData.js */\"./source/js/localStorageData.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\popup.js */\"./source/js/popup.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\scrollBlock.js */\"./source/js/scrollBlock.js\");\n__webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\tab.js */\"./source/js/tab.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\nikas\\WebstormProjects\\smart-device\\source\\js\\utils.js */\"./source/js/utils.js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/blockFocus.js_./source/js/form.js_./source/js/localStorageData.js_./source/js/popup.js_./source/js/scrollBlock.js_./source/js/tab.js_./source/js/utils.js?");
 
 /***/ })
 

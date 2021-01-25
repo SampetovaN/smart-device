@@ -13,7 +13,7 @@
       button.closest('.' + TAB_TAG).classList.toggle(TAB_CLOSE_TAG);
     };
 
-    tabs.forEach(function (tab) {
+    [].slice.call(tabs).forEach(function (tab) {
       tab.classList.add(TAB_CLOSE_TAG);
       tab.addEventListener('click', function (evt) {
         if (evt.target.classList.contains(BUTTON_TAG)) {
