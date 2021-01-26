@@ -12,12 +12,12 @@
     mainInfo.classList.remove(NO_JS_TAG);
     var onClickTabButton = function (button) {
       var closestButton = button.closest('.' + TAB_TAG);
-      if(closestButton.classList.contains(TAB_CLOSE_TAG)) {
-        closestButton.classList.remove(TAB_CLOSE_TAG)
-        closestButton.classList.add(TAB_OPEN_TAG)
+      if (closestButton.classList.contains(TAB_CLOSE_TAG)) {
+        closestButton.classList.remove(TAB_CLOSE_TAG);
+        closestButton.classList.add(TAB_OPEN_TAG);
       } else {
-        closestButton.classList.remove(TAB_OPEN_TAG)
-        closestButton.classList.add(TAB_CLOSE_TAG)
+        closestButton.classList.remove(TAB_OPEN_TAG);
+        closestButton.classList.add(TAB_CLOSE_TAG);
       }
     };
     [].slice.call(tabs).forEach(function (tab) {

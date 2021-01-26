@@ -745,7 +745,10 @@ input[type="radio"],
   @media (max-width: 767px) {
     .info {
       padding-top: 11.4%;
-      padding-bottom: 16.7%; } }
+      padding-bottom: 16.7%;
+      background-size: cover;
+      background-position-y: -97px;
+      background-position-x: 50%; } }
 
 .advantages__list {
   list-style: none;
@@ -1596,7 +1599,7 @@ input[type="radio"],
           opacity: 1; }
         .main-info--nojs .tab__button:hover, .main-info--nojs .tab__button:focus {
           opacity: 1; }
-        .main-info--nojs .tab__button:after {
+        .main-info--nojs .tab__button::after {
           display: none;
           position: static; }
       .main-info--nojs .tab__content {
@@ -1612,8 +1615,7 @@ input[type="radio"],
     display: block; }
   .tab--opened .tab__button::after {
     background-image: url("../img/minus.svg");
-    height: 16px;
-    top: 35px; } }
+    top: 51%; } }
 
 .tab__button {
   display: none; }

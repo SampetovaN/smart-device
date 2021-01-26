@@ -30,18 +30,20 @@
         tab-index: -1;
         position: static;
         cursor: unset;
+
         &:active {
           opacity: 1;
         }
+
         &:hover,
         &:focus, {
           opacity: 1;
         }
-        &:after {
+
+        &::after {
           display: none;
           position: static;
         }
-
       }
 
       .tab__content {

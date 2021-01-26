@@ -12,6 +12,7 @@
         }
       }
     }
+
     &--opened {
       .tab__content {
         display: block;
@@ -20,8 +21,7 @@
       .tab__button {
         &::after {
           background-image: url("../img/minus.svg");
-          height: 16px;
-          top: 35px;
+          top: 51%;
         }
       }
     }
@@ -30,6 +30,7 @@
 
 .tab__button {
   display: none;
+
   @media (max-width: $width-laptop) {
     display: block;
     background-color: transparent;
@@ -42,8 +43,10 @@
     box-sizing: border-box;
     text-align: left;
     outline: none;
+
     @include text-sets(15px, 16px);
     text-transform: uppercase;
+
     &::after {
       content: "";
       width: 16px;
@@ -52,9 +55,11 @@
       background-repeat: no-repeat;
       right: 17px;
     }
+
     &:hover,
     &:focus {
       opacity: 0.7;
+
       &::after {
         opacity: 0.7;
       }
@@ -62,6 +67,7 @@
 
     &:active {
       opacity: 0.3;
+
       &::after {
         opacity: 0.3;
       }

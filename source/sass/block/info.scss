@@ -17,5 +17,8 @@
   @media (max-width: $width-laptop) {
     padding-top: 11.4%;
     padding-bottom: 16.7%;
+    background-size: cover;
+    background-position-y: -97px;
+    background-position-x: 50%;
   }
 }

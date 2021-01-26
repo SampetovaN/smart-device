@@ -61,6 +61,6 @@
     "node": "8.16"
   },
   "dependencies": {
-    "imask": "^6.0.5"
+    "inputmask": "^5.0.5"
   }
 }

@@ -30,22 +30,22 @@
 
   var getItemStorage = function () {
     if (isStorageSupp) {
-      if (inputNamePopup) {
+      if (inputNamePopup && storageNamePopup) {
         inputNamePopup.value = storageNamePopup;
       }
-      if (inputPhonePopup) {
+      if (inputPhonePopup && storagePhonePopup) {
         inputPhonePopup.value = storagePhonePopup;
       }
-      if (inputMessagePopup) {
+      if (inputMessagePopup && storageMessagePopup) {
         inputMessagePopup.value = storageMessagePopup;
       }
-      if (inputNameConsult) {
+      if (inputNameConsult && storageNameConsult) {
         inputNameConsult.value = storageNameConsult;
       }
-      if (inputPhoneConsult) {
+      if (inputPhoneConsult && storagePhoneConsult) {
         inputPhoneConsult.value = storagePhoneConsult;
       }
-      if (inputMessageConsult) {
+      if (inputMessageConsult && storagePhoneMessage) {
         inputMessageConsult.value = storagePhoneMessage;
       }
     }
