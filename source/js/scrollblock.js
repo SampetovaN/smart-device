@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var BODY_LOCK_CLASS = 'body--lock';
+  var BODY_LOCK_CLASS = 'body-lock';
   var body = document.querySelector('body');
   if (body) {
 
