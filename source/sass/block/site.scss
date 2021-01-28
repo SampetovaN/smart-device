@@ -38,12 +38,13 @@
 
 .site__parts {
   @include list-refresh;
-  display: flex;
+/*  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  height: 111px;
+  flex-wrap: wrap;*/
+  column-count: 2;
+  height: 116px;
   padding-left: 3%;
-  padding-right: 16%;
+  padding-right: 9%;
 
   @media (max-width: $width-desktop) {
     height: auto;

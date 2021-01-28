@@ -1,13 +1,12 @@
 .contacts {
   padding-bottom: 3%;
-  //width: 40%;
+  width: 40%;
   box-sizing: border-box;
 
   h2 {
     @include text-sets(15px, 16px);
     text-transform: uppercase;
     margin-bottom: 6%;
-    display: inline-block;
 
     @media (max-width: $width-laptop) {
       display: none;
