@@ -15,6 +15,10 @@
   }
 }
 
+.advantages__link {
+  cursor: unset;
+}
+
 .advantages__list-item {
   width: 48%;
   box-sizing: border-box;
@@ -28,6 +32,7 @@
   justify-content: stretch;
   background-color: #ffffff;
   margin-bottom: 3%;
+
 
   @media (max-width: $width-desktop) {
     padding: 3% 4% 2% 3%;

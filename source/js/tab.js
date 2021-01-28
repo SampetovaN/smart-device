@@ -14,8 +14,8 @@
       [].slice.call(tabs).forEach(function (tab) {
         tab.classList.remove(TAB_OPEN_TAG);
         tab.classList.add(TAB_CLOSE_TAG);
-      })
-    }
+      });
+    };
     var onClickTabButton = function (button) {
 
       var closestButton = button.closest('.' + TAB_TAG);

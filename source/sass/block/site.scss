@@ -1,7 +1,11 @@
 .site {
-  padding-bottom: 3%;
+  /*  padding-bottom: 3%;
   width: 60%;
+  padding-right: 5%;*/
+  padding-bottom: 3%;
+  //width: 60%;
   padding-right: 5%;
+
 
   h2 {
     @include text-sets(15px, 16px);
@@ -15,10 +19,6 @@
     }
 
     @media (max-width: $width-laptop) {
-      /*      font-size: 16px;
-            margin-bottom: 0;
-            padding: 0 0 0 3%;
-            margin-top: 0;*/
       display: none;
     }
   }
@@ -63,7 +63,7 @@
     padding-right: 27px;
 
     @include set-hover(#1b2d37);
-    display: inline-flex;
+    display: inline-block;
     flex-shrink: 0;
     min-width: 95px;
     height: 24px;

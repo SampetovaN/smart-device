@@ -12,6 +12,7 @@
       window.utils.isEscEvent(evt, onCloseButton);
     };
     var isPopupButtonClickEvent = function (evt) {
+      evt.preventDefault();
       if (!evt.target.classList.contains(BUTTON_POPUP_TAG)) {
         onCloseButton();
       }

@@ -13,7 +13,7 @@
     }
 
     @media (max-width: $width-laptop) {
-      margin-bottom: 8%;
+      margin-bottom: 5%;
     }
   }
 
@@ -37,7 +37,7 @@
 
 .social__logo {
   margin-top: 7%;
-  margin-bottom: 22%;
+  margin-bottom: 20%;
   display: block;
 
   @media (max-width: $width-desktop) {
@@ -64,6 +64,10 @@
     justify-content: space-around;
     padding: 0 1% 12%;
   }
+}
+
+.social__item {
+  padding-right: 6%;
 }
 
 .social__link {

@@ -49,9 +49,13 @@
 .services_item {
   width: 31%;
   margin-bottom: 4%;
+  min-width: 369px;
+  padding-right: 1.5%;
 
   @media (max-width: $width-desktop) {
     width: 100%;
+    min-width: auto;
+    padding-right: 0;
 
     &:nth-child(2n+1) {
       margin-bottom: 5%;

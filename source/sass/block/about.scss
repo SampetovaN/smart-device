@@ -100,7 +100,7 @@
   margin-bottom: 4.3%;
 
   @media (max-width: $width-desktop) {
-    margin-bottom: 9.3%;
+    margin-bottom: 8.3%;
   }
 
   @media (max-width: $width-laptop) {
@@ -114,19 +114,21 @@
   color: #00b2ff;
   border: 1px solid #00b2ff;
   border-radius: 5px;
-  width: 18%;
   padding: 1.4% 0;
   display: block;
+  width: 179px;
+
 
   @media (max-width: $width-desktop) {
     width: 34%;
+    max-width: 208px;
     padding: 2.4% 0;
   }
 
   @media (max-width: $width-laptop) {
     width: 62%;
-    padding: 4.4% 0;
-    max-width: 263px;
+    padding: 15px 0;
+    max-width: 200px;
   }
 }
 

@@ -63,6 +63,7 @@
   width: 51%;
   box-sizing: border-box;
   display: block;
+  order: -1;
 
   @include text-sets(16px,14px);
   @include set-hover(#ffffff);

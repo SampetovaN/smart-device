@@ -23,7 +23,7 @@
 
 
   h2 {
-    @include text-sets(36px,50px);
+    @include text-sets(36px, 50px);
     color: #ffffff;
     margin: 0;
     padding-top: 9%;
@@ -31,7 +31,7 @@
 
     @media (max-width: $width-desktop) {
       @include text-correct(32px, 45px);
-      padding-top: 13%;
+      padding-top: 14%;
       padding-left: 0;
     }
 
@@ -42,7 +42,7 @@
   }
 
   p {
-    @include set-mono-text(16px,21px);
+    @include set-mono-text(16px, 21px);
     color: #ffffff;
     padding-left: 1%;
     margin-bottom: 5%;
@@ -81,15 +81,20 @@
 
 .consult__form {
   padding: 0 21% 0 1.4%;
+  padding-right: 0;
+  flex-direction: column;
+  width: 61.3%;
+  min-width: 491px;
+  box-sizing: border-box;
 
   @media (max-width: $width-desktop) {
     padding: 0;
+    width: auto;
+    min-width: auto;
   }
 }
 
 .consult__up {
-  padding-right: 23%;
-
   @media (max-width: $width-desktop) {
     padding: 0;
   }
@@ -115,18 +120,8 @@
 }
 
 .consult__textarea {
-  flex-grow: 2;
   width: 100%;
-  padding-right: 6%;
   margin-bottom: 4.9%;
-
-  > .textarea {
-    height: 160px;
-    border-radius: 0;
-    @media (max-width: $width-laptop) {
-      height: 108px;
-    }
-  }
 
   @media (max-width: $width-desktop) {
     padding: 0;
@@ -137,7 +132,7 @@
 .consult__down {
   display: flex;
   align-items: center;
-  padding-right: 29%;
+  padding-right: 8%;
 
   @media (max-width: $width-desktop) {
     padding: 0;
@@ -163,14 +158,18 @@
 }
 
 .consult__textarea-input {
-  max-width: 570px;
   border-radius: 0;
-  @media (max-width: $width-desktop) {
-    width: 590px;
-    max-width: none;
-  }
+  height: 160px;
 
   @media (max-width: $width-laptop) {
-    width: 290px;
+    height: 108px;
   }
+  /*  @media (max-width: $width-desktop) {
+      width: 590px;
+      max-width: none;
+    }
+
+    @media (max-width: $width-laptop) {
+      width: 290px;
+    }*/
 }

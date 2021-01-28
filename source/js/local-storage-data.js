@@ -59,7 +59,12 @@
     if (evt.target.closest(FORM_CONSULT)) {
       localStorage.setItem('name', inputNameConsult.value);
       localStorage.setItem('phone', inputPhoneConsult.value);
-      localStorage.setItem('question-consult', inputMessageConsult.value);
+      if (inputMessageConsult.value) {
+        localStorage.setItem('question-consult', inputMessageConsult.value);
+      } else {
+        localStorage.removeItem('question-consult');
+      }
+
     }
   };
   getItemStorage();

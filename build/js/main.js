@@ -109,15 +109,15 @@ eval("module.exports = __webpack_require__(/*! ./dist/inputmask */ \"./node_modu
 
 /***/ }),
 
-/***/ "./source/js/blockfocus.js":
-/*!*********************************!*\
-  !*** ./source/js/blockfocus.js ***!
-  \*********************************/
+/***/ "./source/js/block-focus.js":
+/*!**********************************!*\
+  !*** ./source/js/block-focus.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var NEGATIVE_TABINDEX = -1;\n  var COMMON_TABINDEX = 0;\n  var nonInteractiveItems = document.querySelectorAll('.header a, .header button, .main a, .main button, .footer a, .footer button');\n\n  var unsetTabindex = function (node) {\n    node.tabIndex = NEGATIVE_TABINDEX;\n  };\n\n  var setTabindex = function (node) {\n    node.tabIndex = COMMON_TABINDEX;\n  };\n\n  var blockTab = function () {\n    if (nonInteractiveItems) {\n      [].slice.call(nonInteractiveItems).forEach(unsetTabindex);\n    }\n  };\n\n  var unblockTab = function () {\n    if (nonInteractiveItems) {\n      [].slice.call(nonInteractiveItems).forEach(setTabindex);\n    }\n  };\n\n  window.blockFocus = {\n    set: blockTab,\n    unset: unblockTab\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/blockfocus.js?");
+eval("\n\n(function () {\n  var NEGATIVE_TABINDEX = -1;\n  var COMMON_TABINDEX = 0;\n  var nonInteractiveItems = document.querySelectorAll('.header a, .header button, .main a, .main button, .footer a, .footer button');\n\n  var unsetTabindex = function (node) {\n    node.tabIndex = NEGATIVE_TABINDEX;\n  };\n\n  var setTabindex = function (node) {\n    node.tabIndex = COMMON_TABINDEX;\n  };\n\n  var blockTab = function () {\n    if (nonInteractiveItems) {\n      [].slice.call(nonInteractiveItems).forEach(unsetTabindex);\n    }\n  };\n\n  var unblockTab = function () {\n    if (nonInteractiveItems) {\n      [].slice.call(nonInteractiveItems).forEach(setTabindex);\n    }\n  };\n\n  window.blockFocus = {\n    set: blockTab,\n    unset: unblockTab\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/block-focus.js?");
 
 /***/ }),
 
@@ -133,15 +133,15 @@ eval("\n\n(function () {\n  var PHONE_INPUT_TAG = 'form__input--phone input';\n 
 
 /***/ }),
 
-/***/ "./source/js/localstoragedata.js":
-/*!***************************************!*\
-  !*** ./source/js/localstoragedata.js ***!
-  \***************************************/
+/***/ "./source/js/local-storage-data.js":
+/*!*****************************************!*\
+  !*** ./source/js/local-storage-data.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var FORM_POPUP = '.popup__form';\n  var FORM_CONSULT = '.consult__form';\n  var isStorageSupp = true;\n  var storageNamePopup = '';\n  var storagePhonePopup = '';\n  var storageMessagePopup = '';\n  var storageNameConsult = '';\n  var storagePhoneConsult = '';\n  var storagePhoneMessage = '';\n  var inputNamePopup = document.querySelector('#name');\n  var inputPhonePopup = document.querySelector('#phone');\n  var inputMessagePopup = document.querySelector('#question');\n  var inputNameConsult = document.querySelector('#user-name');\n  var inputPhoneConsult = document.querySelector('#user-phone');\n  var inputMessageConsult = document.querySelector('#question-consult');\n\n  try {\n    storageNamePopup = localStorage.getItem('user-name');\n    storagePhonePopup = localStorage.getItem('user-phone');\n    storageMessagePopup = localStorage.getItem('question');\n    storageNameConsult = localStorage.getItem('name');\n    storagePhoneConsult = localStorage.getItem('phone');\n    storagePhoneMessage = localStorage.getItem('question-consult');\n  } catch (err) {\n    isStorageSupp = false;\n  }\n\n  var getItemStorage = function () {\n    if (isStorageSupp) {\n      if (inputNamePopup && storageNamePopup) {\n        inputNamePopup.value = storageNamePopup;\n      }\n\n      if (inputPhonePopup && storagePhonePopup) {\n        inputPhonePopup.value = storagePhonePopup;\n      }\n\n      if (inputMessagePopup && storageMessagePopup) {\n        inputMessagePopup.value = storageMessagePopup;\n      }\n\n      if (inputNameConsult && storageNameConsult) {\n        inputNameConsult.value = storageNameConsult;\n      }\n\n      if (inputPhoneConsult && storagePhoneConsult) {\n        inputPhoneConsult.value = storagePhoneConsult;\n      }\n\n      if (inputMessageConsult && storagePhoneMessage) {\n        inputMessageConsult.value = storagePhoneMessage;\n      }\n    }\n  };\n\n  var setLocalStorage = function (evt) {\n    if (evt.target.closest(FORM_POPUP)) {\n      localStorage.setItem('user-name', inputNamePopup.value);\n      localStorage.setItem('user-phone', inputPhonePopup.value);\n      localStorage.setItem('question', inputMessagePopup.value);\n    }\n\n    if (evt.target.closest(FORM_CONSULT)) {\n      localStorage.setItem('name', inputNameConsult.value);\n      localStorage.setItem('phone', inputPhoneConsult.value);\n      localStorage.setItem('question-consult', inputMessageConsult.value);\n    }\n  };\n\n  getItemStorage();\n  window.localStorageData = {\n    set: setLocalStorage\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/localstoragedata.js?");
+eval("\n\n(function () {\n  var FORM_POPUP = '.popup__form';\n  var FORM_CONSULT = '.consult__form';\n  var isStorageSupp = true;\n  var storageNamePopup = '';\n  var storagePhonePopup = '';\n  var storageMessagePopup = '';\n  var storageNameConsult = '';\n  var storagePhoneConsult = '';\n  var storagePhoneMessage = '';\n  var inputNamePopup = document.querySelector('#name');\n  var inputPhonePopup = document.querySelector('#phone');\n  var inputMessagePopup = document.querySelector('#question');\n  var inputNameConsult = document.querySelector('#user-name');\n  var inputPhoneConsult = document.querySelector('#user-phone');\n  var inputMessageConsult = document.querySelector('#question-consult');\n\n  try {\n    storageNamePopup = localStorage.getItem('user-name');\n    storagePhonePopup = localStorage.getItem('user-phone');\n    storageMessagePopup = localStorage.getItem('question');\n    storageNameConsult = localStorage.getItem('name');\n    storagePhoneConsult = localStorage.getItem('phone');\n    storagePhoneMessage = localStorage.getItem('question-consult');\n  } catch (err) {\n    isStorageSupp = false;\n  }\n\n  var getItemStorage = function () {\n    if (isStorageSupp) {\n      if (inputNamePopup && storageNamePopup) {\n        inputNamePopup.value = storageNamePopup;\n      }\n\n      if (inputPhonePopup && storagePhonePopup) {\n        inputPhonePopup.value = storagePhonePopup;\n      }\n\n      if (inputMessagePopup && storageMessagePopup) {\n        inputMessagePopup.value = storageMessagePopup;\n      }\n\n      if (inputNameConsult && storageNameConsult) {\n        inputNameConsult.value = storageNameConsult;\n      }\n\n      if (inputPhoneConsult && storagePhoneConsult) {\n        inputPhoneConsult.value = storagePhoneConsult;\n      }\n\n      if (inputMessageConsult && storagePhoneMessage) {\n        inputMessageConsult.value = storagePhoneMessage;\n      }\n    }\n  };\n\n  var setLocalStorage = function (evt) {\n    if (evt.target.closest(FORM_POPUP)) {\n      localStorage.setItem('user-name', inputNamePopup.value);\n      localStorage.setItem('user-phone', inputPhonePopup.value);\n      localStorage.setItem('question', inputMessagePopup.value);\n    }\n\n    if (evt.target.closest(FORM_CONSULT)) {\n      localStorage.setItem('name', inputNameConsult.value);\n      localStorage.setItem('phone', inputPhoneConsult.value);\n\n      if (inputMessageConsult.value) {\n        localStorage.setItem('question-consult', inputMessageConsult.value);\n      } else {\n        localStorage.removeItem('question-consult');\n      }\n    }\n  };\n\n  getItemStorage();\n  window.localStorageData = {\n    set: setLocalStorage\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/local-storage-data.js?");
 
 /***/ }),
 
@@ -153,19 +153,19 @@ eval("\n\n(function () {\n  var FORM_POPUP = '.popup__form';\n  var FORM_CONSULT
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var TAG_CLOSED = 'popup--closed';\n  var BUTTON_POPUP_TAG = 'main-nav__button';\n  var buttonPopup = document.querySelector('.' + BUTTON_POPUP_TAG);\n  var content = document.querySelector('.content');\n  var popup = document.querySelector('.popup');\n  var closeButton = document.querySelector('.popup__close');\n\n  if (buttonPopup && popup && content) {\n    var onEscKeyDown = function (evt) {\n      window.utils.isEscEvent(evt, onCloseButton);\n    };\n\n    var isPopupButtonClickEvent = function (evt) {\n      if (!evt.target.classList.contains(BUTTON_POPUP_TAG)) {\n        onCloseButton();\n      }\n    };\n\n    var onClickPopupButton = function (evt) {\n      evt.preventDefault();\n      popup.classList.remove(TAG_CLOSED);\n      window.scrollBlock.set();\n      window.blockFocus.set();\n      var inputName = popup.querySelector('#name');\n      inputName.focus();\n      document.addEventListener('keydown', onEscKeyDown);\n\n      if (closeButton) {\n        closeButton.addEventListener('click', onCloseButton);\n      }\n\n      content.addEventListener('click', isPopupButtonClickEvent);\n      buttonPopup.removeEventListener('click', onClickPopupButton);\n    };\n\n    var onCloseButton = function () {\n      popup.classList.add(TAG_CLOSED);\n      window.blockFocus.unset();\n      window.scrollBlock.unset();\n      buttonPopup.addEventListener('click', onClickPopupButton);\n      content.removeEventListener('click', isPopupButtonClickEvent);\n\n      if (closeButton) {\n        closeButton.removeEventListener('click', onCloseButton);\n      }\n    };\n\n    buttonPopup.addEventListener('click', onClickPopupButton);\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/popup.js?");
+eval("\n\n(function () {\n  var TAG_CLOSED = 'popup--closed';\n  var BUTTON_POPUP_TAG = 'main-nav__button';\n  var buttonPopup = document.querySelector('.' + BUTTON_POPUP_TAG);\n  var content = document.querySelector('.content');\n  var popup = document.querySelector('.popup');\n  var closeButton = document.querySelector('.popup__close');\n\n  if (buttonPopup && popup && content) {\n    var onEscKeyDown = function (evt) {\n      window.utils.isEscEvent(evt, onCloseButton);\n    };\n\n    var isPopupButtonClickEvent = function (evt) {\n      evt.preventDefault();\n\n      if (!evt.target.classList.contains(BUTTON_POPUP_TAG)) {\n        onCloseButton();\n      }\n    };\n\n    var onClickPopupButton = function (evt) {\n      evt.preventDefault();\n      popup.classList.remove(TAG_CLOSED);\n      window.scrollBlock.set();\n      window.blockFocus.set();\n      var inputName = popup.querySelector('#name');\n      inputName.focus();\n      document.addEventListener('keydown', onEscKeyDown);\n\n      if (closeButton) {\n        closeButton.addEventListener('click', onCloseButton);\n      }\n\n      content.addEventListener('click', isPopupButtonClickEvent);\n      buttonPopup.removeEventListener('click', onClickPopupButton);\n    };\n\n    var onCloseButton = function () {\n      popup.classList.add(TAG_CLOSED);\n      window.blockFocus.unset();\n      window.scrollBlock.unset();\n      buttonPopup.addEventListener('click', onClickPopupButton);\n      content.removeEventListener('click', isPopupButtonClickEvent);\n\n      if (closeButton) {\n        closeButton.removeEventListener('click', onCloseButton);\n      }\n    };\n\n    buttonPopup.addEventListener('click', onClickPopupButton);\n  }\n})();\n\n//# sourceURL=webpack:///./source/js/popup.js?");
 
 /***/ }),
 
-/***/ "./source/js/scrollblock.js":
-/*!**********************************!*\
-  !*** ./source/js/scrollblock.js ***!
-  \**********************************/
+/***/ "./source/js/scroll-block.js":
+/*!***********************************!*\
+  !*** ./source/js/scroll-block.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-eval("\n\n(function () {\n  var BODY_LOCK_CLASS = 'body-lock';\n  var body = document.querySelector('body');\n\n  if (body) {\n    var getBodyScrollTop = function () {\n      return self.pageYOffset || document.documentElement && document.documentElement.ScrollTop || document.body && document.body.scrollTop;\n    };\n\n    var setScrollBlock = function () {\n      body.dataset.scrollY = getBodyScrollTop();\n      body.classList.add(BODY_LOCK_CLASS);\n      body.style.top = '-' + body.dataset.scrollY + 'px';\n    };\n\n    var unsetScrollBlock = function () {\n      body.classList.remove(BODY_LOCK_CLASS);\n      window.scrollTo(0, body.dataset.scrollY);\n    };\n  }\n\n  window.scrollBlock = {\n    set: setScrollBlock,\n    unset: unsetScrollBlock\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/scrollblock.js?");
+eval("\n\n(function () {\n  var BODY_LOCK_CLASS = 'body-lock';\n  var body = document.querySelector('body');\n\n  if (body) {\n    var getBodyScrollTop = function () {\n      return self.pageYOffset || document.documentElement && document.documentElement.ScrollTop || document.body && document.body.scrollTop;\n    };\n\n    var setScrollBlock = function () {\n      body.dataset.scrollY = getBodyScrollTop();\n      body.classList.add(BODY_LOCK_CLASS);\n      body.style.top = '-' + body.dataset.scrollY + 'px';\n    };\n\n    var unsetScrollBlock = function () {\n      body.classList.remove(BODY_LOCK_CLASS);\n      window.scrollTo(0, body.dataset.scrollY);\n    };\n  }\n\n  window.scrollBlock = {\n    set: setScrollBlock,\n    unset: unsetScrollBlock\n  };\n})();\n\n//# sourceURL=webpack:///./source/js/scroll-block.js?");
 
 /***/ }),
 
@@ -194,13 +194,13 @@ eval("\n\n(function () {\n  var ESCAPE_BUTTON = 'Escape';\n\n  var isEscEvent = 
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** multi ./source/js/blockfocus.js ./source/js/form.js ./source/js/localstoragedata.js ./source/js/popup.js ./source/js/scrollblock.js ./source/js/tab.js ./source/js/utils.js ***!
-  \***********************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** multi ./source/js/block-focus.js ./source/js/form.js ./source/js/local-storage-data.js ./source/js/popup.js ./source/js/scroll-block.js ./source/js/tab.js ./source/js/utils.js ***!
+  \***************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./source/js/blockfocus.js */\"./source/js/blockfocus.js\");\n__webpack_require__(/*! ./source/js/form.js */\"./source/js/form.js\");\n__webpack_require__(/*! ./source/js/localstoragedata.js */\"./source/js/localstoragedata.js\");\n__webpack_require__(/*! ./source/js/popup.js */\"./source/js/popup.js\");\n__webpack_require__(/*! ./source/js/scrollblock.js */\"./source/js/scrollblock.js\");\n__webpack_require__(/*! ./source/js/tab.js */\"./source/js/tab.js\");\nmodule.exports = __webpack_require__(/*! ./source/js/utils.js */\"./source/js/utils.js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/blockfocus.js_./source/js/form.js_./source/js/localstoragedata.js_./source/js/popup.js_./source/js/scrollblock.js_./source/js/tab.js_./source/js/utils.js?");
+eval("__webpack_require__(/*! ./source/js/block-focus.js */\"./source/js/block-focus.js\");\n__webpack_require__(/*! ./source/js/form.js */\"./source/js/form.js\");\n__webpack_require__(/*! ./source/js/local-storage-data.js */\"./source/js/local-storage-data.js\");\n__webpack_require__(/*! ./source/js/popup.js */\"./source/js/popup.js\");\n__webpack_require__(/*! ./source/js/scroll-block.js */\"./source/js/scroll-block.js\");\n__webpack_require__(/*! ./source/js/tab.js */\"./source/js/tab.js\");\nmodule.exports = __webpack_require__(/*! ./source/js/utils.js */\"./source/js/utils.js\");\n\n\n//# sourceURL=webpack:///multi_./source/js/block-focus.js_./source/js/form.js_./source/js/local-storage-data.js_./source/js/popup.js_./source/js/scroll-block.js_./source/js/tab.js_./source/js/utils.js?");
 
 /***/ })
 

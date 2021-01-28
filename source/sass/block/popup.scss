@@ -65,9 +65,15 @@
   border-radius: 0;
 }
 
+.popup__down {
+  display: flex;
+  flex-direction: column;
+}
+
 .popup__button {
   width: 100%;
   margin-bottom: 8%;
+  order: -1;
 }
 
 .popup__checkbox {
