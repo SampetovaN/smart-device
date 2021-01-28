@@ -1108,6 +1108,7 @@ input[type="checkbox"]:checked + .checkbox__label::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   resize: none;
+  -webkit-appearance: none;
   border-radius: 0;
   font-size: 16px;
   line-height: 14px;
@@ -1284,7 +1285,8 @@ input[type="checkbox"]:checked + .checkbox__label::before {
   padding-right: 6%;
   margin-bottom: 4.9%; }
   .consult__textarea > .textarea {
-    height: 160px; }
+    height: 160px;
+    border-radius: 0; }
     @media (max-width: 767px) {
       .consult__textarea > .textarea {
         height: 108px; } }
@@ -1323,7 +1325,8 @@ input[type="checkbox"]:checked + .checkbox__label::before {
       width: 100%; } }
 
 .consult__textarea-input {
-  max-width: 570px; }
+  max-width: 570px;
+  border-radius: 0; }
   @media (max-width: 1023px) {
     .consult__textarea-input {
       width: 590px;
@@ -1984,7 +1987,8 @@ input[type="checkbox"]:checked + .checkbox__label::before {
 .popup__textarea-input {
   max-width: 432px;
   height: 107px;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  border-radius: 0; }
 
 .popup__button {
   width: 100%;
