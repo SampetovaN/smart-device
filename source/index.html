@@ -17,14 +17,11 @@
 <div class="content">
   <header class="header">
     <nav class="main-nav">
-      <a class="logo main-nav__logo" aria-label="Логотип Smart Device">
-        <svg width="52" height="52">
-          <use xlink:href="#sprite-logo"></use>
-        </svg>
-        <div class="logo__text">
-          <span class="logo__title">Smart Device</span>
-          <span class="logo__translation">умные технологии</span>
-        </div>
+      <a class="main-nav__logo">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+          <img src="img/logo.svg" width="216" height="52" alt="Логотип Smart Device">
+        </picture>
       </a>
       <ul class="main-nav__nav-list site-list">
         <li class="site-list__item">
@@ -42,7 +39,7 @@
             <span>+7 (495) 000 52 52</span></a>
         </li>
       </ul>
-      <a class="button main-nav__button" href="#">Заказать звонок</a>
+      <a class="button main-nav__button" href="form.html">Заказать звонок</a>
     </nav>
   </header>
   <main class="main">
@@ -183,14 +180,10 @@
     <div class="footer__up">
       <section class="footer__social social">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
-        <a class="logo social__logo" aria-label="Логотип Smart Device">
-          <svg width="52" height="52">
-            <use xlink:href="#sprite-logo"></use>
+        <a class="social__logo" aria-label="Логотип Smart Device">
+          <svg width="216" height="52">
+            <use xlink:href="#sprite-logo-footer"></use>
           </svg>
-          <div class="logo__text">
-            <span class="logo__title">Service Device</span>
-            <span class="logo__translation">умные технологии</span>
-          </div>
         </a>
         <p>1999-2018 SD Service Devices</p>
         <ul class="social__list">

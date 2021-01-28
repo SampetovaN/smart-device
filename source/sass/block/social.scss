@@ -38,21 +38,12 @@
 .social__logo {
   margin-top: 7%;
   margin-bottom: 22%;
-
-  .logo__title {
-    color: #203c42;
-  }
+  display: block;
 
   @media (max-width: $width-desktop) {
     margin: 0;
-    padding-bottom: 2.5%;
+    padding-bottom: 1.5%;
     padding-right: 1%;
-  }
-
-  @media (max-width: $width-laptop) {
-    svg {
-      transform: scale(1.1);
-    }
   }
 }
 
@@ -71,7 +62,7 @@
   @media (max-width: $width-laptop) {
     width: 38%;
     justify-content: space-around;
-    padding: 0 1% 14%;
+    padding: 0 1% 12%;
   }
 }
 
