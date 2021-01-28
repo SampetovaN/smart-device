@@ -4,6 +4,7 @@
   padding-top: 12px;
   box-sizing: border-box;
   resize: none;
+  border-radius: 0;
 
   @include set-mono-text(16px,14px);
   @include color-input;
