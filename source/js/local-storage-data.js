@@ -54,7 +54,11 @@
     if (evt.target.closest(FORM_POPUP)) {
       localStorage.setItem('user-name', inputNamePopup.value);
       localStorage.setItem('user-phone', inputPhonePopup.value);
-      localStorage.setItem('question', inputMessagePopup.value);
+      if (inputMessagePopup.value) {
+        localStorage.setItem('question', inputMessagePopup.value);
+      } else {
+        localStorage.removeItem('question');
+      }
     }
     if (evt.target.closest(FORM_CONSULT)) {
       localStorage.setItem('name', inputNameConsult.value);
@@ -64,7 +68,6 @@
       } else {
         localStorage.removeItem('question-consult');
       }
-
     }
   };
   getItemStorage();

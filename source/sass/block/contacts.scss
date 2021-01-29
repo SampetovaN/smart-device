@@ -1,7 +1,7 @@
 .contacts {
   padding-bottom: 3%;
-  width: 40%;
   box-sizing: border-box;
+  width: 52%;
 
   h2 {
     @include text-sets(15px, 16px);
@@ -11,6 +11,10 @@
     @media (max-width: $width-laptop) {
       display: none;
     }
+  }
+
+  @media (max-width: $width-desktop) {
+    width: auto;
   }
 
   @media (max-width: $width-laptop) {
@@ -50,6 +54,7 @@
     color: #1b2d37;
     display: inline-block;
     vertical-align: unset;
+    min-width: 200px;
 
     @include set-hover(#1b2d37);
   }

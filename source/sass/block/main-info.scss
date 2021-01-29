@@ -1,8 +1,11 @@
 .main-info {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  width: 71%;
+  width: 65%;
+
+  @media (width: $width-desktop-pattern) {
+    width: 71%;
+  }
 
   @media (max-width: $width-desktop) {
     width: 100%;
@@ -12,6 +15,7 @@
 
   @media (max-width: $width-laptop) {
     padding: 0;
+    flex-wrap: wrap;
   }
 
   &--nojs {

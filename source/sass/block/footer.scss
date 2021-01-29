@@ -20,7 +20,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 13.1%;
+  padding: 0 9% 0 13.1%;
+
+  @media (width: $width-desktop-pattern) {
+    justify-content: unset;
+  }
 
   @media (max-width: $width-desktop) {
     display: block;
@@ -45,7 +49,12 @@
   padding-bottom: 3%;
   padding-right: 3%;
 
+  @media (width: $width-desktop-pattern) {
+    margin-right: 10%;
+  }
+
   @media (max-width: $width-desktop) {
     padding: 0;
+    margin-right: 0;
   }
 }

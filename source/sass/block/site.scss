@@ -1,10 +1,12 @@
 .site {
-  /*  padding-bottom: 3%;
-  width: 60%;
-  padding-right: 5%;*/
+  padding-right: 4%;
   padding-bottom: 3%;
-  //width: 60%;
-  padding-right: 5%;
+
+  width: 70%;
+
+  @media (width: $width-desktop-pattern) {
+    width: 82%;
+  }
 
 
   h2 {
@@ -38,17 +40,14 @@
 
 .site__parts {
   @include list-refresh;
-/*  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;*/
   column-count: 2;
-  height: 116px;
   padding-left: 3%;
   padding-right: 9%;
 
   @media (max-width: $width-desktop) {
     height: auto;
     padding-right: 0;
+    column-count: unset;
   }
 
   @media (max-width: $width-laptop) {
@@ -62,13 +61,17 @@
     @include set-mono-text(15px, 21px);
     color: #1b2d37;
     padding-right: 27px;
+    display: inline-block;
+    vertical-align: unset;
 
     @include set-hover(#1b2d37);
-    display: inline-block;
-    flex-shrink: 0;
     min-width: 95px;
     height: 24px;
     margin-bottom: -2%;
+
+    @media (max-width: $width-desktop) {
+      margin-bottom: -1%;
+    }
   }
 
   line-height: 21px;

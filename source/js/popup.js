@@ -7,7 +7,11 @@
   var content = document.querySelector('.content');
   var popup = document.querySelector('.popup');
   var closeButton = document.querySelector('.popup__close');
-  if (buttonPopup && popup && content) {
+  var popupSubmitButton = document.querySelector('.popup__button');
+  if (buttonPopup && popup && content && closeButton && popupSubmitButton) {
+    popup.addEventListener('keydown', function (evt) {
+      window.focusTrap.set(evt, popupSubmitButton, closeButton);
+    });
     var onEscKeyDown = function (evt) {
       window.utils.isEscEvent(evt, onCloseButton);
     };
@@ -26,10 +30,7 @@
       var inputName = popup.querySelector('#name');
       inputName.focus();
       document.addEventListener('keydown', onEscKeyDown);
-
-      if (closeButton) {
-        closeButton.addEventListener('click', onCloseButton);
-      }
+      closeButton.addEventListener('click', onCloseButton);
       content.addEventListener('click', isPopupButtonClickEvent);
       buttonPopup.removeEventListener('click', onClickPopupButton);
     };
@@ -39,10 +40,9 @@
       window.scrollBlock.unset();
       buttonPopup.addEventListener('click', onClickPopupButton);
       content.removeEventListener('click', isPopupButtonClickEvent);
-      if (closeButton) {
-        closeButton.removeEventListener('click', onCloseButton);
-      }
+      closeButton.removeEventListener('click', onCloseButton);
     };
     buttonPopup.addEventListener('click', onClickPopupButton);
   }
+
 })();

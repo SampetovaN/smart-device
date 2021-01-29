@@ -27,6 +27,11 @@
   overflow-y: auto;
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
 
+  &--separate {
+    top: -56px;
+    max-height: calc(100vh - 50px);
+  }
+
   h2 {
     @include text-sets(28px, 39px);
     color: #ffffff;
