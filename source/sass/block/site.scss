@@ -61,23 +61,21 @@
   width: 100%;
   min-width: 188px;
   margin-bottom: -3%;
-
+  padding-right: 16px;
 
   a {
     @include set-mono-text(15px, 21px);
     color: #1b2d37;
+
     @include set-hover(#1b2d37);
-    display: inline-block;
-    vertical-align: unset;
-    padding-right: 16px;
 
     @media (max-width: $width-desktop) {
       display: initial;
     }
   }
+
   @media (max-width: $width-desktop) {
     width: auto;
     min-width: 95px;
   }
-
 }

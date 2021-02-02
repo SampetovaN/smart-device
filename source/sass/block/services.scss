@@ -46,6 +46,7 @@
   flex-wrap: wrap;
   width: 61%;
   min-width: 999px;
+
   @media (max-width: $width-desktop) {
     flex-direction: column;
     padding: 0 1.5% 0 2%;

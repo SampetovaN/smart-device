@@ -28,14 +28,15 @@
 }
 
 .main-nav__logo {
-
   &[href] {
     @include set-opacity;
   }
+
   @media (max-width: $width-desktop) {
     img {
       width: 199px;
     }
+
     &--form {
       display: none;
     }
