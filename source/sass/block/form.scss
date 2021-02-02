@@ -21,7 +21,7 @@
 }
 
 .form__input {
-  margin-bottom: 6.5%;
+  margin-bottom: 34px;
 
   @include set-mono-text(16px,14px);
   color: #ffffff;
@@ -48,7 +48,8 @@
   }
 
   @media (max-width: $width-laptop) {
-    margin-bottom: 10%;
+    margin-bottom: 30px;
+
   }
 }
 

@@ -18,6 +18,9 @@
   border: 1px solid #ffffff;
   border-radius: 5px;
   padding: 11px 35px 13px;
+  box-sizing: border-box;
+  width: 187px;
+  flex-shrink: 0;
 
   @media (max-width: $width-desktop) {
     display: none;
@@ -25,9 +28,16 @@
 }
 
 .main-nav__logo {
+
+  &[href] {
+    @include set-opacity;
+  }
   @media (max-width: $width-desktop) {
     img {
       width: 199px;
+    }
+    &--form {
+      display: none;
     }
   }
 

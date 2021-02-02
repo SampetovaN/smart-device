@@ -28,8 +28,16 @@
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
 
   &--separate {
-    top: -56px;
-    max-height: calc(100vh - 50px);
+    box-shadow: none;
+    height: auto;
+    position: static;
+    margin: 111px auto 111px;
+    overflow: unset;
+    max-height: none;
+    padding-top: 0.2%;
+   .popup__down {
+     padding-bottom: 7%;
+   }
   }
 
   h2 {
@@ -61,10 +69,10 @@
 
 .popup__input {
   width: 100%;
+  margin-bottom: 6.5%;
 }
 
 .popup__textarea-input {
-  max-width: 432px;
   height: 107px;
   margin-bottom: 5%;
   border-radius: 0;
